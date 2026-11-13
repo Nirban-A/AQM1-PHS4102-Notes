@@ -1,0 +1,2467 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete lecture notes and worked problems for Advanced Quantum Mechanics I (PHS 4102)">
+      
+      
+      
+        <link rel="canonical" href="https://nirban-a.github.io/AQM1-PHS4102-Notes/04-time-independent-approximations/29-variational-method/">
+      
+      
+        <link rel="prev" href="../28-applications-to-hydrogen-fine-structure-zeeman/">
+      
+      
+        <link rel="next" href="../30-wkb-approximation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>The Variational Method - Advanced Quantum Mechanics I (PHS 4102)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#29-the-variational-method" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Advanced Quantum Mechanics I (PHS 4102)" class="md-header__button md-logo" aria-label="Advanced Quantum Mechanics I (PHS 4102)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Advanced Quantum Mechanics I (PHS 4102)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Variational Method
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nirban-a/AQM1-PHS4102-Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nirban-a/AQM1-PHS4102-Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01-foundations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part I: Foundations of Quantum Mechanics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-symmetry-angular-momentum/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part II: Symmetry, Angular Momentum and Clebsch-Gordan Coefficients
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03-tensor-operators/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part III: Tensor Operators, Wigner-Eckart and the Projection Theorem
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part IV: Time-Independent Approximation Methods
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-time-dependent-perturbation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part V: Time-Dependent Perturbation Theory
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Advanced Quantum Mechanics I (PHS 4102)" class="md-nav__button md-logo" aria-label="Advanced Quantum Mechanics I (PHS 4102)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Advanced Quantum Mechanics I (PHS 4102)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nirban-a/AQM1-PHS4102-Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nirban-a/AQM1-PHS4102-Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../01-foundations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Foundations of Quantum Mechanics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I: Foundations of Quantum Mechanics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/01-postulates-quantum-mechanics-dirac-notation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Postulates of Quantum Mechanics and Dirac Notation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/02-compatible-incompatible-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Compatible and Incompatible Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/03-dirac-delta-function-position-momentum-bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Dirac Delta Function and the Position and Momentum Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/04-time-evolution-stationary-states-schrodinger-heisenberg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Time Evolution: Stationary States and the Schrödinger and Heisenberg Pictures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/05-one-dimensional-time-independent-schrodinger-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The One-Dimensional Time-Independent Schrödinger Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/06-linear-harmonic-oscillator-ladder-operator-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. The Linear Harmonic Oscillator: Ladder-Operator Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/07-classical-limit-oscillator-coherent-states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Classical Limit of the Oscillator: Coherent States
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../02-symmetry-angular-momentum/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Symmetry, Angular Momentum and Clebsch-Gordan Coefficients
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II: Symmetry, Angular Momentum and Clebsch-Gordan Coefficients
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/08-translation-symmetry-conservation-momentum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Translation Symmetry and Conservation of Momentum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/09-time-translation-time-evolution-operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Time Translation and the Time-Evolution Operator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/10-rotations-isotropy-space-angular-momentum-conservation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Rotations, Isotropy of Space and Angular Momentum Conservation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/11-angular-momentum-eigenvalues-ladder-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Angular Momentum: Eigenvalues and Ladder Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/12-spin-1-2-pauli-matrices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Spin-1/2 and the Pauli Matrices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/13-j-1-representation-angular-momentum-uncertainty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. The j=1 Representation and the Angular Momentum Uncertainty Relation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/14-rotation-matrices-wigner-d-matrices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Rotation Matrices (Wigner D-Matrices)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/15-orbital-angular-momentum-spherical-harmonics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Orbital Angular Momentum and Spherical Harmonics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/16-addition-angular-momenta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Addition of Angular Momenta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/17-clebsch-gordan-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Clebsch-Gordan Tables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/18-spin-orbit-coupling-doublet-sodium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Spin-Orbit Coupling: the Doublet in Sodium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-symmetry-angular-momentum/19-central-potentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Central Potentials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../03-tensor-operators/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III: Tensor Operators, Wigner-Eckart and the Projection Theorem
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III: Tensor Operators, Wigner-Eckart and the Projection Theorem
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/20-scalar-vector-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Scalar and Vector Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/21-cartesian-tensors-reducible-irreducible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Cartesian Tensors: Reducible and Irreducible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/22-irreducible-tensor-operators-their-commutation-relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    22. Irreducible Tensor Operators and Their Commutation Relations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/23-wigner-eckart-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    23. The Wigner-Eckart Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/24-application-dipole-matrix-elements-selection-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24. Application: Dipole Matrix Elements and Selection Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/25-projection-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    25. The Projection Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part IV: Time-Independent Approximation Methods
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part IV: Time-Independent Approximation Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-time-independent-perturbation-theory-non-degenerate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    26. Time-Independent Perturbation Theory: Non-Degenerate Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-time-independent-perturbation-theory-degenerate-case/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    27. Time-Independent Perturbation Theory: Degenerate Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28-applications-to-hydrogen-fine-structure-zeeman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    28. Applications to Hydrogen: Fine Structure and the Zeeman Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    29. The Variational Method
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    29. The Variational Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#291-the-variational-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.1 The Variational Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#292-example-harmonic-oscillator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.2 Example: Harmonic Oscillator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#293-example-delta-function-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.3 Example: Delta-Function Potential
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#294-ground-state-of-helium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.4 Ground State of Helium
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30-wkb-approximation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    30. The WKB Approximation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-time-dependent-perturbation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part V: Time-Dependent Perturbation Theory
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part V: Time-Dependent Perturbation Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/31-time-dependent-perturbation-theory-two-level/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    31. Time-Dependent Perturbation Theory: The Two-Level System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/32-interaction-picture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    32. The Interaction Picture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/33-two-level-system-with-an-oscillating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    33. Two-Level System with an Oscillating Coupling: Exact Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/34-dyson-series-general-transition-amplitudes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    34. The Dyson Series and General Transition Amplitudes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/35-harmonic-perturbation-fermi-s-golden-rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    35. Harmonic Perturbation and Fermi's Golden Rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/36-adiabatic-sudden-approximations-first-order-treatment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    36. Adiabatic and Sudden Approximations: First-Order Treatment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/37-emission-absorption-radiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    37. Emission and Absorption of Radiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/38-sudden-approximation-overlap-eigenstates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    38. The Sudden Approximation: Overlap of Eigenstates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/39-time-translation-conservation-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    39. Time Translation and Conservation of Energy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#291-the-variational-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.1 The Variational Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#292-example-harmonic-oscillator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.2 Example: Harmonic Oscillator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#293-example-delta-function-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.3 Example: Delta-Function Potential
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#294-ground-state-of-helium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29.4 Ground State of Helium
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+    <p class="pdf-links">
+      <a class="md-button" href="../../pdf/chapters/29-variational-method.pdf">Download this chapter (PDF)</a>
+      <a class="md-button" href="../../pdf/AQM1_PHS4102_Notes.pdf">Full notes (PDF)</a>
+    </p>
+  
+  
+                  
+
+
+  
+    <a href="https://github.com/nirban-a/AQM1-PHS4102-Notes/edit/main/docs/04-time-independent-approximations/29-variational-method.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="29-the-variational-method">29 The Variational Method<a class="headerlink" href="#29-the-variational-method" title="Permanent link">&para;</a></h1>
+<h2 id="291-the-variational-principle">29.1 The Variational Principle<a class="headerlink" href="#291-the-variational-principle" title="Permanent link">&para;</a></h2>
+<p><strong>Goal:</strong> calculate the ground-state energy <span class="arithmatex">\(E_{GS}\)</span> of a system whose Hamiltonian we cannot solve in the time-independent Schrödinger equation. The variational method provides an <strong>upper bound</strong> to the ground-state energy: guess a wavefunction <span class="arithmatex">\(|\psi\rangle\)</span> (the <em>trial wavefunction</em>) and compute <span class="arithmatex">\(\langle\hat H\rangle\)</span>.</p>
+<div class="admonition thm">
+<p class="admonition-title">Variational Principle</p>
+<p>For any normalized trial state <span class="arithmatex">\(|\psi\rangle\)</span>,</p>
+<div class="arithmatex">\[
+E_{GS} \le \langle\psi|\hat H|\psi\rangle = \langle\hat H\rangle
+\]</div>
+<p>(for an unnormalized state use <span class="arithmatex">\(\langle\hat H\rangle = \langle\psi|\hat H|\psi\rangle/\langle\psi|\psi\rangle\)</span>).</p>
+</div>
+<p><strong>Proof:</strong> Let <span class="arithmatex">\(\hat H|\phi_n\rangle = E_n|\phi_n\rangle\)</span> (the eigenstates are unknown but exist and form a complete set) with <span class="arithmatex">\(E_0\equiv E_{GS}\le E_1\le\cdots\)</span>. Expand <span class="arithmatex">\(|\psi\rangle = \sum_nc_n|\phi_n\rangle\)</span>. Normalization gives</p>
+<div class="arithmatex">\[
+\langle\psi|\psi\rangle = \sum_m\sum_nc_m^*c_n\underbrace{\langle\phi_m|\phi_n\rangle}_{\delta_{mn}} = \sum_n|c_n|^2 = 1
+\]</div>
+<p>and therefore</p>
+<div class="arithmatex">\[\begin{align*}
+\langle\hat H\rangle &amp;= \sum_m\sum_nc_m^*c_nE_n\delta_{mn} = \sum_nE_n|c_n|^2 = E_0|c_0|^2 + E_1|c_1|^2 + \cdots\\
+&amp;\ge E_0\sum_n|c_n|^2 = E_0 \qquad\blacksquare
+\end{align*}\]</div>
+<div class="admonition intuition">
+<p class="admonition-title">Intuition</p>
+<p><span class="arithmatex">\(\langle\hat H\rangle\)</span> is a weighted average of the true energies <span class="arithmatex">\(E_n\)</span> with weights <span class="arithmatex">\(|c_n|^2\)</span> summing to one, so it can never fall below the smallest one.</p>
+</div>
+<div class="admonition examtip">
+<p class="admonition-title">Exam Tip (recipe)</p>
+<ol>
+<li>
+<p>Choose a trial function with a free parameter (or two) and with the right qualitative shape (no nodes for the ground state, correct behaviour at infinity and at boundaries, correct symmetry).</p>
+</li>
+<li>
+<p>Normalize it (fixes the constant).</p>
+</li>
+<li>
+<p>Compute <span class="arithmatex">\(\langle\hat H\rangle = \langle T\rangle + \langle V\rangle\)</span> as a function of the parameter.</p>
+</li>
+<li>
+<p>Minimize: <span class="arithmatex">\(\dfrac{d\langle\hat H\rangle}{d(\text{parameter})}=0\)</span>, and substitute back.</p>
+</li>
+</ol>
+</div>
+<div class="admonition studynote">
+<p class="admonition-title">Study Note</p>
+<p>If the trial function contains the exact ground state for some value of the parameter, the minimum equals <span class="arithmatex">\(E_{GS}\)</span> exactly (the oscillator below). Because <span class="arithmatex">\(\langle\hat H\rangle - E_0 = \sum_{n\ge1}(E_n-E_0)|c_n|^2\)</span> and <span class="arithmatex">\(|c_n|\sim\)</span> the error of the wavefunction, the <em>energy</em> error is second order in the <em>wavefunction</em> error, which is why even a crude trial function gives a good energy.</p>
+</div>
+<h2 id="292-example-harmonic-oscillator">29.2 Example: Harmonic Oscillator<a class="headerlink" href="#292-example-harmonic-oscillator" title="Permanent link">&para;</a></h2>
+<div class="admonition prob">
+<p class="admonition-title">Example: Variational Treatment of the Harmonic Oscillator</p>
+<p><span class="arithmatex">\(\hat H = -\dfrac{\hbar^2}{2m}\dfrac{d^2}{dx^2} + \dfrac12m\omega^2x^2\)</span>, with the exactly known <span class="arithmatex">\(E_{GS} = \tfrac12\hbar\omega\)</span>. Use the trial function <span class="arithmatex">\(\psi(x) = A\exp(-bx^2)\)</span>.</p>
+<p><strong>Normalization:</strong></p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty}\psi^*\psi\,dx = A^2\int_{-\infty}^{\infty}e^{-2bx^2}dx = A^2\sqrt{\frac{\pi}{2b}} = 1 \;\Longrightarrow\; A = \Big(\frac{2b}{\pi}\Big)^{1/4}
+\]</div>
+<p><strong>Kinetic and potential energy:</strong></p>
+<div class="arithmatex">\[
+\langle T\rangle = -\frac{\hbar^2}{2m}|A|^2\int_{-\infty}^{\infty}e^{-bx^2}\frac{d^2}{dx^2}e^{-bx^2}dx = \frac{\hbar^2b}{2m}, \qquad
+\langle V\rangle = \frac12m\omega^2|A|^2\int_{-\infty}^{\infty}x^2e^{-2bx^2}dx = \frac{m\omega^2}{8b}
+\]</div>
+<div class="arithmatex">\[
+\langle\hat H\rangle = \frac{\hbar^2b}{2m} + \frac{m\omega^2}{8b} \;\ge\; E_{GS}
+\]</div>
+<p><strong>Minimize:</strong> <span class="arithmatex">\(\dfrac{d}{db}\langle\hat H\rangle = \dfrac{\hbar^2}{2m} - \dfrac{m\omega^2}{8b^2} = 0 \Rightarrow b^2 = \dfrac{m^2\omega^2}{4\hbar^2}\Rightarrow b = \dfrac{m\omega}{2\hbar}\)</span>. Then</p>
+<div class="arithmatex">\[
+\langle\hat H\rangle_{\min} = \frac{\hbar^2}{2m}\frac{m\omega}{2\hbar} + \frac{m\omega^2}{8}\frac{2\hbar}{m\omega} = \frac{\hbar\omega}{4} + \frac{\hbar\omega}{4} \;\;\Rightarrow\;\; \boxed{\langle\hat H\rangle_{\min} = \tfrac12\hbar\omega = E_{GS}}
+\]</div>
+</div>
+<div class="admonition solution">
+<p class="admonition-title">Complete Solution (the two integrals)</p>
+<p>Using <span class="arithmatex">\(\frac{d^2}{dx^2}e^{-bx^2} = (4b^2x^2-2b)e^{-bx^2}\)</span> and <span class="arithmatex">\(\int x^2e^{-2bx^2}dx = \frac1{4b}\sqrt{\frac{\pi}{2b}}\)</span>:</p>
+<div class="arithmatex">\[
+\langle T\rangle = -\frac{\hbar^2}{2m}A^2\Big[4b^2\frac1{4b} - 2b\Big]\sqrt{\frac\pi{2b}} = \frac{\hbar^2b}{2m}, \qquad
+\langle V\rangle = \frac12m\omega^2A^2\frac1{4b}\sqrt{\frac\pi{2b}} = \frac{m\omega^2}{8b}
+\]</div>
+</div>
+<p>At the minimum the two contributions are equal, <span class="arithmatex">\(\langle T\rangle = \langle V\rangle = \frac14\hbar\omega\)</span>, as required by the virial theorem for a quadratic potential. The trial function is the exact ground state, hence the bound is saturated.</p>
+<p><img alt="" class="fig" src="../../assets/figures/29-variational-method-fig1.svg" /></p>
+<h2 id="293-example-delta-function-potential">29.3 Example: Delta-Function Potential<a class="headerlink" href="#293-example-delta-function-potential" title="Permanent link">&para;</a></h2>
+<div class="admonition prob">
+<p class="admonition-title">Example: Variational Treatment of the Attractive Delta Potential</p>
+<p><span class="arithmatex">\(\hat H = -\dfrac{\hbar^2}{2m}\dfrac{d^2}{dx^2} - \alpha\delta(x)\)</span>, with exactly known <span class="arithmatex">\(E_{GS} = -\dfrac{m\alpha^2}{2\hbar^2}\)</span>. Trial function <span class="arithmatex">\(\psi(x) = A\exp(-bx^2)\)</span> with <span class="arithmatex">\(A = (2b/\pi)^{1/4}\)</span>.</p>
+<p><strong>Kinetic energy</strong> (same as before): <span class="arithmatex">\(\langle T\rangle = \dfrac{\hbar^2b}{2m}\)</span>.<br />
+<strong>Potential energy:</strong></p>
+<div class="arithmatex">\[
+\langle V\rangle = -\alpha|A|^2\int_{-\infty}^{\infty}dx\,\delta(x)\,e^{-2bx^2} = -\alpha|A|^2 = -\alpha\sqrt{\frac{2b}{\pi}}
+\]</div>
+<div class="arithmatex">\[
+\langle\hat H\rangle = \frac{\hbar^2b}{2m} - \alpha\sqrt{\frac{2b}{\pi}}
+\]</div>
+<p><strong>Minimize:</strong> <span class="arithmatex">\(\dfrac{d}{db}\langle\hat H\rangle = \dfrac{\hbar^2}{2m} - \alpha\sqrt{\dfrac2\pi}\dfrac1{2\sqrt b} = 0 \Rightarrow \dfrac\alpha2\sqrt{\dfrac{2}{b\pi}} = \dfrac{\hbar^2}{2m}\Rightarrow b = \dfrac{2m^2\alpha^2}{\pi\hbar^4}\)</span>. Hence</p>
+<div class="arithmatex">\[
+\boxed{\langle\hat H\rangle_{\min} = -\frac{m\alpha^2}{\pi\hbar^2} &gt; E_{GS}}
+\]</div>
+<div class="admonition verification">
+<p class="admonition-title">Verification</p>
+<p><span class="arithmatex">\(-\dfrac{m\alpha^2}{\pi\hbar^2} = \dfrac2\pi E_{GS}\approx0.64\,E_{GS}\)</span>, which is higher (less negative) than <span class="arithmatex">\(E_{GS}\)</span> since <span class="arithmatex">\(\pi&gt;2\)</span>, so the upper-bound property holds. The exact ground state is <span class="arithmatex">\(\psi=\sqrt\kappa\,e^{-\kappa|x|}\)</span> with <span class="arithmatex">\(\kappa=m\alpha/\hbar^2\)</span>; a Gaussian has the wrong cusp at <span class="arithmatex">\(x=0\)</span>, which is why the energy is only about 64% of the exact binding energy.</p>
+</div>
+</div>
+<h2 id="294-ground-state-of-helium">29.4 Ground State of Helium<a class="headerlink" href="#294-ground-state-of-helium" title="Permanent link">&para;</a></h2>
+<p>The helium atom has a nucleus of charge <span class="arithmatex">\(+2e\)</span> and two electrons at <span class="arithmatex">\(\vec r_1,\vec r_2\)</span>, with <span class="arithmatex">\(\vec r = \vec r_2-\vec r_1\)</span> the separation.</p>
+<p><img alt="" class="fig" src="../../assets/figures/29-variational-method-fig2.svg" /></p>
+<div class="arithmatex">\[
+\hat H = -\frac{\hbar^2}{2m}\big(\nabla_1^2+\nabla_2^2\big) - \frac{e^2}{4\pi\varepsilon_0}\Big(\frac2{r_1}+\frac2{r_2}\Big) + \frac{e^2}{4\pi\varepsilon_0}\frac1{|\vec r_1-\vec r_2|}
+\]</div>
+<p>Experimentally the ground-state energy is <span class="arithmatex">\(E_{GS} = -78.975\ \text{eV}\approx -79\)</span> eV.</p>
+<div class="admonition prob">
+<p class="admonition-title">Ground State of Helium: Setup and Trial Function</p>
+<p><strong>Step 1: neglect the electron-electron interaction.</strong> Then <span class="arithmatex">\(\hat H = \hat h_1+\hat h_2\)</span> with <span class="arithmatex">\(\hat h_i = -\frac{\hbar^2}{2m}\nabla_i^2 - \frac{e^2}{4\pi\varepsilon_0}\frac2{r_i}\)</span>, and <span class="arithmatex">\(\phi(\vec r_1,\vec r_2) = \psi_1(\vec r_1)\psi_2(\vec r_2)\)</span> with <span class="arithmatex">\(\hat h_i\psi_i = \varepsilon_i\psi_i\)</span>. Each <span class="arithmatex">\(\hat h_i\)</span> is a hydrogen-like Hamiltonian with nuclear charge <span class="arithmatex">\(2e\)</span>, whose Bohr radius is <span class="arithmatex">\(a_{He} = \dfrac{4\pi\varepsilon_0\hbar^2}{m\,2e\cdot e} = \dfrac{a_H}2\)</span>. Writing <span class="arithmatex">\(a\equiv a_H\)</span> and <span class="arithmatex">\(E_H\)</span> for the hydrogen ground-state energy,</p>
+<div class="arithmatex">\[
+\psi^{H}_{100}(r) = \frac1{\sqrt{\pi a^3}}e^{-r/a}, \qquad \psi^{He^+}_{100}(r) = \sqrt{\frac{8}{\pi a^3}}\,e^{-2r/a}, \qquad E_H = -\frac{m}{2\hbar^2}\Big(\frac{e^2}{4\pi\varepsilon_0}\Big)^2\approx-13.6\ \text{eV}
+\]</div>
+<p>The energy of a hydrogen-like ion with charge <span class="arithmatex">\(2e\)</span> is <span class="arithmatex">\(4E_H\)</span>, so <span class="arithmatex">\(\varepsilon_1=\varepsilon_2=4E_H\)</span>:</p>
+<div class="arithmatex">\[\begin{gather*}
+\phi(\vec r_1,\vec r_2) = \frac{8}{\pi a^3}\exp\Big[-\frac2a(r_1+r_2)\Big]\\
+E = \varepsilon_1+\varepsilon_2 = 8E_H\approx-109\ \text{eV}\quad(\text{without } e^-e^-\text{ interaction})
+\end{gather*}\]</div>
+<div class="admonition studynote">
+<p class="admonition-title">Study Note</p>
+<p><em>(sign of <span class="arithmatex">\(E_H\)</span>):</em> The notebook writes <span class="arithmatex">\(E_H=\frac{m}{2\hbar^2}\big(\frac{e^2}{4\pi\varepsilon_0}\big)^2\)</span>, but it uses <span class="arithmatex">\(E_H\)</span> as the (negative) hydrogen ground-state energy <span class="arithmatex">\(-13.6\)</span> eV (for example <span class="arithmatex">\(8E_H=-109\)</span> eV, <span class="arithmatex">\(-\frac52E_H=+34\)</span> eV). The explicit minus sign is written above.</p>
+</div>
+<p><strong>Step 2: use <span class="arithmatex">\(\phi_0=\phi(\vec r_1,\vec r_2)\)</span> as a trial wavefunction for the full <span class="arithmatex">\(\hat H = \hat h_1+\hat h_2+\dfrac{e^2}{4\pi\varepsilon_0}\dfrac1{|\vec r_1-\vec r_2|}\)</span>.</strong></p>
+<div class="arithmatex">\[
+\langle\phi_0|\hat H|\phi_0\rangle = \langle\phi_0|\hat h_1+\hat h_2|\phi_0\rangle + \frac{e^2}{4\pi\varepsilon_0}\Big\langle\phi_0\Big|\frac1{|\vec r_1-\vec r_2|}\Big|\phi_0\Big\rangle = 8E_H + V_{ee}
+\]</div>
+<div class="arithmatex">\[
+V_{ee} = \frac{e^2}{4\pi\varepsilon_0}\Big(\frac{8}{\pi a^3}\Big)^2\int\!\!\int\frac{\exp\!\big[-\frac4a(r_1+r_2)\big]}{|\vec r_1-\vec r_2|}\,d^3r_1\,d^3r_2
+= \frac{e^2}{4\pi\varepsilon_0}\Big(\frac{8}{\pi a^3}\Big)^2\int e^{-4r_1/a}\,I_2(r_1)\,d^3r_1
+\]</div>
+<p>with the inner integral <span class="arithmatex">\(I_2(r_1) = \displaystyle\int\frac{e^{-4r_2/a}}{|\vec r_1-\vec r_2|}\,d^3r_2\)</span>. Choose the <span class="arithmatex">\(z_2\)</span>-axis along <span class="arithmatex">\(\vec r_1\)</span>, so that <span class="arithmatex">\(|\vec r_1-\vec r_2| = \sqrt{r_1^2+r_2^2-2r_1r_2\cos\theta_2}\)</span>.</p>
+<p><img alt="" class="fig" src="../../assets/figures/29-variational-method-fig3.svg" /></p>
+</div>
+<div class="admonition prob">
+<p class="admonition-title">Ground State of Helium (continued): the Integral <span class="arithmatex">\(V_{ee}\)</span></p>
+<p><strong>Angular integral.</strong> With <span class="arithmatex">\(d^3r_2 = r_2^2\sin\theta_2\,dr_2\,d\theta_2\,d\varphi_2\)</span> and the <span class="arithmatex">\(\varphi_2\)</span> integration giving <span class="arithmatex">\(2\pi\)</span>:</p>
+<div class="arithmatex">\[
+I_2 = 2\pi\int_0^\infty r_2^2e^{-4r_2/a}\,I_3\,dr_2, \qquad I_3 = \int_{-1}^{1}\frac{d(\cos\theta_2)}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos\theta_2}} = \frac{1}{r_1r_2}\big(r_1+r_2-|r_1-r_2|\big)
+\]</div>
+<p>so that <span class="arithmatex">\(I_3 = \dfrac{2}{r_1}\)</span> for <span class="arithmatex">\(r_1&gt;r_2\)</span> and <span class="arithmatex">\(I_3 = \dfrac2{r_2}\)</span> for <span class="arithmatex">\(r_1&lt;r_2\)</span>. Then</p>
+<div class="arithmatex">\[
+I_2 = 4\pi\left[\frac1{r_1}\int_0^{r_1}e^{-4r_2/a}\,r_2^2\,dr_2 + \int_{r_1}^\infty e^{-4r_2/a}\,r_2\,dr_2\right]
+= \frac{\pi a^3}{8r_1}\left[1 - \Big(1+\frac{2r_1}{a}\Big)e^{-4r_1/a}\right]
+\]</div>
+<p><strong>Radial integral.</strong> With <span class="arithmatex">\(d^3r_1 = 4\pi r_1^2dr_1\)</span>:</p>
+<div class="arithmatex">\[
+V_{ee} = \frac{e^2}{4\pi\varepsilon_0}\Big(\frac8{\pi a^3}\Big)^2\,4\pi\,\frac{\pi a^3}{8}\int_0^\infty r_1\Big[e^{-4r_1/a} - \Big(1+\frac{2r_1}a\Big)e^{-8r_1/a}\Big]dr_1
+\]</div>
+<div class="admonition solution">
+<p class="admonition-title">Complete Solution</p>
+<p>The three elementary integrals are <span class="arithmatex">\(\int_0^\infty r\,e^{-4r/a}dr = \frac{a^2}{16}\)</span>, <span class="arithmatex">\(\int_0^\infty r\,e^{-8r/a}dr = \frac{a^2}{64}\)</span> and <span class="arithmatex">\(\frac2a\int_0^\infty r^2e^{-8r/a}dr = \frac{a^2}{128}\)</span>, so the bracket integral is <span class="arithmatex">\(\frac{a^2}{16}-\frac{a^2}{64}-\frac{a^2}{128} = \frac{5a^2}{128}\)</span>. The prefactor is <span class="arithmatex">\(\big(\frac{8}{\pi a^3}\big)^2\,4\pi\,\frac{\pi a^3}{8} = \frac{32}{a^3}\)</span>, hence</p>
+</div>
+<div class="admonition thm">
+<p class="admonition-title">Electron-Electron Repulsion in the Trial State</p>
+<div class="arithmatex">\[
+V_{ee} = \frac{5}{4a}\Big(\frac{e^2}{4\pi\varepsilon_0}\Big) = -\frac52E_H \approx +34\ \text{eV}
+\]</div>
+<div class="arithmatex">\[
+\langle\hat H\rangle = 8E_H - \tfrac52E_H = (-109+34)\ \text{eV} = -75\ \text{eV} &gt; E_{GS}
+\]</div>
+</div>
+<p>This is already within about 5% of the experimental <span class="arithmatex">\(-78.975\)</span> eV.</p>
+<p><strong>Even better: screening.</strong> Each electron screens the nucleus from the other, so an electron effectively sees a charge smaller than <span class="arithmatex">\(+2e\)</span>. Take a nuclear charge <span class="arithmatex">\(Z\)</span> as the <strong>variational parameter</strong>:</p>
+<div class="arithmatex">\[
+\psi(\vec r_1,\vec r_2) = \frac{Z^3}{\pi a^3}\exp\Big[-\frac Za(r_1+r_2)\Big]
+\]</div>
+<div class="admonition studynote">
+<p class="admonition-title">Study Note</p>
+<p>The notebook writes the prefactor as <span class="arithmatex">\(Z^3/8a^3\)</span>; the normalized prefactor is <span class="arithmatex">\(Z^3/(\pi a^3)\)</span> (which reduces to <span class="arithmatex">\(8/\pi a^3\)</span> at <span class="arithmatex">\(Z=2\)</span>, as above).</p>
+</div>
+<div class="admonition solution">
+<p class="admonition-title">Complete Solution</p>
+<p><em>(the <span class="arithmatex">\(Z\)</span>-dependence):</em> With hydrogen-like expectation values for charge <span class="arithmatex">\(Z\)</span>, <span class="arithmatex">\(\langle T\rangle = -Z^2E_H\)</span> per electron, <span class="arithmatex">\(\langle 1/r\rangle=Z/a\)</span>, and the true attraction to charge <span class="arithmatex">\(2e\)</span>:</p>
+<div class="arithmatex">\[
+\langle T\rangle_{\text{tot}} = -2Z^2E_H, \qquad \langle V_{Ne}\rangle_{\text{tot}} = +8ZE_H, \qquad \langle V_{ee}\rangle = \frac{5Z}{4a}\frac{e^2}{4\pi\varepsilon_0} = -\frac54ZE_H
+\]</div>
+<div class="arithmatex">\[
+\langle\hat H\rangle = \Big[2Z^2 - 4(Z-2)Z - \tfrac54Z\Big]E_H = \Big[-2Z^2+\tfrac{27}{4}Z\Big]E_H
+\]</div>
+<p>(The form <span class="arithmatex">\(2Z^2-4(Z-2)Z=-2Z^2+8Z\)</span> is the sum of the kinetic and nuclear-attraction terms.) At <span class="arithmatex">\(Z=2\)</span> this gives <span class="arithmatex">\(5.5E_H=-74.8\)</span> eV, matching the result above. Minimize with <span class="arithmatex">\(E_H&lt;0\)</span>:</p>
+<div class="arithmatex">\[
+\frac{d}{dZ}\langle\hat H\rangle = 0 \;\Rightarrow\; -4Z+\tfrac{27}4=0 \;\Rightarrow\; \boxed{Z=\tfrac{27}{16}=1.69}, \qquad \boxed{\langle\hat H\rangle = -77.5\ \text{eV}}
+\]</div>
+</div>
+<div class="admonition verification">
+<p class="admonition-title">Verification</p>
+<p><span class="arithmatex">\(\big(-2Z^2+\frac{27}4Z\big)\big|_{Z=27/16} = \frac{729}{128}=5.69\)</span>, and <span class="arithmatex">\(5.69\times(-13.6)=-77.5\)</span> eV, still above (less negative than) the experimental <span class="arithmatex">\(-78.975\)</span> eV, within about 2%. <span class="arithmatex">\(Z_{\text{eff}}=1.69&lt;2\)</span> is the screening effect.</p>
+</div>
+</div>
+<div class="admonition mistakes">
+<p class="admonition-title">Common mistakes</p>
+<p><span class="arithmatex">\(a\)</span> forgetting to normalize the trial function, (b) using a trial function that does not satisfy the boundary conditions of the problem, (c) minimizing the wrong quantity (minimize <span class="arithmatex">\(\langle\hat H\rangle\)</span>, not <span class="arithmatex">\(\langle T\rangle\)</span>), (d) interpreting the minimum as an exact energy: it is only an <em>upper bound</em>, (e) confusing <span class="arithmatex">\(E_H\)</span> (negative) with the Rydberg energy <span class="arithmatex">\(+13.6\)</span> eV.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../28-applications-to-hydrogen-fine-structure-zeeman/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 28. Applications to Hydrogen: Fine Structure and the Zeeman Effect">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                28. Applications to Hydrogen: Fine Structure and the Zeeman Effect
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../30-wkb-approximation/" class="md-footer__link md-footer__link--next" aria-label="Next: 30. The WKB Approximation">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                30. The WKB Approximation
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2396 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete lecture notes and worked problems for Advanced Quantum Mechanics I (PHS 4102)">
+      
+      
+      
+        <link rel="canonical" href="https://nirban-a.github.io/AQM1-PHS4102-Notes/02-symmetry-angular-momentum/18-spin-orbit-coupling-doublet-sodium/">
+      
+      
+        <link rel="prev" href="../17-clebsch-gordan-tables/">
+      
+      
+        <link rel="next" href="../19-central-potentials/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Spin-Orbit Coupling: the Doublet in Sodium - Advanced Quantum Mechanics I (PHS 4102)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#18-spin-orbit-coupling-the-doublet-in-sodium" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Advanced Quantum Mechanics I (PHS 4102)" class="md-header__button md-logo" aria-label="Advanced Quantum Mechanics I (PHS 4102)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Advanced Quantum Mechanics I (PHS 4102)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spin-Orbit Coupling: the Doublet in Sodium
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nirban-a/AQM1-PHS4102-Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nirban-a/AQM1-PHS4102-Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01-foundations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part I: Foundations of Quantum Mechanics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part II: Symmetry, Angular Momentum and Clebsch-Gordan Coefficients
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03-tensor-operators/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part III: Tensor Operators, Wigner-Eckart and the Projection Theorem
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-time-independent-approximations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part IV: Time-Independent Approximation Methods
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-time-dependent-perturbation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part V: Time-Dependent Perturbation Theory
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Advanced Quantum Mechanics I (PHS 4102)" class="md-nav__button md-logo" aria-label="Advanced Quantum Mechanics I (PHS 4102)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Advanced Quantum Mechanics I (PHS 4102)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nirban-a/AQM1-PHS4102-Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nirban-a/AQM1-PHS4102-Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../01-foundations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Foundations of Quantum Mechanics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I: Foundations of Quantum Mechanics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/01-postulates-quantum-mechanics-dirac-notation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Postulates of Quantum Mechanics and Dirac Notation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/02-compatible-incompatible-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Compatible and Incompatible Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/03-dirac-delta-function-position-momentum-bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Dirac Delta Function and the Position and Momentum Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/04-time-evolution-stationary-states-schrodinger-heisenberg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Time Evolution: Stationary States and the Schrödinger and Heisenberg Pictures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/05-one-dimensional-time-independent-schrodinger-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. The One-Dimensional Time-Independent Schrödinger Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/06-linear-harmonic-oscillator-ladder-operator-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. The Linear Harmonic Oscillator: Ladder-Operator Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-foundations/07-classical-limit-oscillator-coherent-states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Classical Limit of the Oscillator: Coherent States
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Symmetry, Angular Momentum and Clebsch-Gordan Coefficients
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II: Symmetry, Angular Momentum and Clebsch-Gordan Coefficients
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-translation-symmetry-conservation-momentum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Translation Symmetry and Conservation of Momentum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-time-translation-time-evolution-operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Time Translation and the Time-Evolution Operator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-rotations-isotropy-space-angular-momentum-conservation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Rotations, Isotropy of Space and Angular Momentum Conservation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-angular-momentum-eigenvalues-ladder-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Angular Momentum: Eigenvalues and Ladder Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-spin-1-2-pauli-matrices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Spin-1/2 and the Pauli Matrices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-j-1-representation-angular-momentum-uncertainty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. The j=1 Representation and the Angular Momentum Uncertainty Relation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-rotation-matrices-wigner-d-matrices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Rotation Matrices (Wigner D-Matrices)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-orbital-angular-momentum-spherical-harmonics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Orbital Angular Momentum and Spherical Harmonics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-addition-angular-momenta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Addition of Angular Momenta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-clebsch-gordan-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Clebsch-Gordan Tables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Spin-Orbit Coupling: the Doublet in Sodium
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Spin-Orbit Coupling: the Doublet in Sodium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#181-the-effective-hamiltonian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 The Effective Hamiltonian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#182-choice-of-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 Choice of Basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#183-energy-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3 Energy Shifts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#184-spectroscopic-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4 Spectroscopic Notation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#185-magnetic-field-two-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.5 Magnetic Field: Two Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-central-potentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Central Potentials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../03-tensor-operators/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III: Tensor Operators, Wigner-Eckart and the Projection Theorem
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III: Tensor Operators, Wigner-Eckart and the Projection Theorem
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/20-scalar-vector-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Scalar and Vector Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/21-cartesian-tensors-reducible-irreducible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Cartesian Tensors: Reducible and Irreducible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/22-irreducible-tensor-operators-their-commutation-relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    22. Irreducible Tensor Operators and Their Commutation Relations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/23-wigner-eckart-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    23. The Wigner-Eckart Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/24-application-dipole-matrix-elements-selection-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24. Application: Dipole Matrix Elements and Selection Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-tensor-operators/25-projection-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    25. The Projection Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../04-time-independent-approximations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part IV: Time-Independent Approximation Methods
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part IV: Time-Independent Approximation Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-time-independent-approximations/26-time-independent-perturbation-theory-non-degenerate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    26. Time-Independent Perturbation Theory: Non-Degenerate Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-time-independent-approximations/27-time-independent-perturbation-theory-degenerate-case/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    27. Time-Independent Perturbation Theory: Degenerate Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-time-independent-approximations/28-applications-to-hydrogen-fine-structure-zeeman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    28. Applications to Hydrogen: Fine Structure and the Zeeman Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-time-independent-approximations/29-variational-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    29. The Variational Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-time-independent-approximations/30-wkb-approximation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    30. The WKB Approximation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-time-dependent-perturbation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part V: Time-Dependent Perturbation Theory
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part V: Time-Dependent Perturbation Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/31-time-dependent-perturbation-theory-two-level/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    31. Time-Dependent Perturbation Theory: The Two-Level System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/32-interaction-picture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    32. The Interaction Picture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/33-two-level-system-with-an-oscillating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    33. Two-Level System with an Oscillating Coupling: Exact Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/34-dyson-series-general-transition-amplitudes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    34. The Dyson Series and General Transition Amplitudes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/35-harmonic-perturbation-fermi-s-golden-rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    35. Harmonic Perturbation and Fermi's Golden Rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/36-adiabatic-sudden-approximations-first-order-treatment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    36. Adiabatic and Sudden Approximations: First-Order Treatment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/37-emission-absorption-radiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    37. Emission and Absorption of Radiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/38-sudden-approximation-overlap-eigenstates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    38. The Sudden Approximation: Overlap of Eigenstates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-time-dependent-perturbation/39-time-translation-conservation-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    39. Time Translation and Conservation of Energy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#181-the-effective-hamiltonian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 The Effective Hamiltonian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#182-choice-of-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 Choice of Basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#183-energy-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3 Energy Shifts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#184-spectroscopic-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4 Spectroscopic Notation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#185-magnetic-field-two-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.5 Magnetic Field: Two Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+    <p class="pdf-links">
+      <a class="md-button" href="../../pdf/chapters/18-spin-orbit-coupling-doublet-sodium.pdf">Download this chapter (PDF)</a>
+      <a class="md-button" href="../../pdf/AQM1_PHS4102_Notes.pdf">Full notes (PDF)</a>
+    </p>
+  
+  
+                  
+
+
+  
+    <a href="https://github.com/nirban-a/AQM1-PHS4102-Notes/edit/main/docs/02-symmetry-angular-momentum/18-spin-orbit-coupling-doublet-sodium.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="18-spin-orbit-coupling-the-doublet-in-sodium">18 Spin-Orbit Coupling: the Doublet in Sodium<a class="headerlink" href="#18-spin-orbit-coupling-the-doublet-in-sodium" title="Permanent link">&para;</a></h1>
+<h2 id="181-the-effective-hamiltonian">18.1 The Effective Hamiltonian<a class="headerlink" href="#181-the-effective-hamiltonian" title="Permanent link">&para;</a></h2>
+<p>Sodium has the configuration <span class="arithmatex">\(1s^22s^22p^63s^1\)</span>. The ten electrons of the closed shells form the <span class="arithmatex">\(\mathrm{Na}^+\)</span> core, and the single valence electron moves in an effective central potential in which the nuclear charge is screened by the core, for example</p>
+<div class="arithmatex">\[
+V(r)=-\frac{Ze^2}r\,e^{-r/r_0}\quad(\text{the exponential is the screening effect}).
+\]</div>
+<p>The complication comes from the <em>spin</em> of the electron. In the rest frame of the electron the radial electric field <span class="arithmatex">\(\vec E\)</span> of the core appears as a magnetic field</p>
+<div class="arithmatex">\[
+\vec B\propto-\frac{\vec v\times\vec E}{c^2}\ \ (\propto\hat{\vec L}),
+\]</div>
+<p>and the electron spin (magnetic moment <span class="arithmatex">\(\propto\hat{\vec S}\)</span>) interacts with it, <span class="arithmatex">\(\vec B\cdot\tfrac\hbar2\hat{\vec\sigma}=\lambda\,\hat{\vec L}\cdot\hat{\vec S}\)</span>.</p>
+<div class="admonition thm">
+<p class="admonition-title">Effective Hamiltonian for Sodium</p>
+<div class="arithmatex">\[
+\hat H_{\mathrm{eff}}=-\frac{\hbar^2}{2m}\nabla^2+V(r)+\lambda\,\hat{\vec L}\cdot\hat{\vec S}.
+\]</div>
+</div>
+<p>Without the <span class="arithmatex">\(\lambda\)</span> term, <span class="arithmatex">\(\{\hat H,\hat L^2,\hat L_z\}\)</span> (together with <span class="arithmatex">\(\hat S^2,\hat S_z\)</span>) is a complete set of commuting operators. The question is which basis is good when <span class="arithmatex">\(\lambda\neq0\)</span>.</p>
+<h2 id="182-choice-of-basis">18.2 Choice of Basis<a class="headerlink" href="#182-choice-of-basis" title="Permanent link">&para;</a></h2>
+<p>Two bases are available:</p>
+<ul>
+<li>
+<p><strong>Uncoupled:</strong> <span class="arithmatex">\(\{\hat L^2,\hat S^2,\hat L_z,\hat S_z\}\)</span> with states <span class="arithmatex">\(|\ell,s,m_\ell,m_s\rangle\)</span>.</p>
+</li>
+<li>
+<p><strong>Coupled:</strong> with <span class="arithmatex">\(\hat{\vec J}=\hat{\vec L}+\hat{\vec S}\)</span>, <span class="arithmatex">\(\{\hat J^2,\hat J_z,\hat L^2,\hat S^2\}\)</span> with states <span class="arithmatex">\(|j,m,\ell,s\rangle\equiv|j,m\rangle\)</span>.</p>
+</li>
+</ul>
+<p>If there were no <span class="arithmatex">\(\lambda\hat{\vec L}\cdot\hat{\vec S}\)</span> term, both bases would commute with <span class="arithmatex">\(\hat H_{\mathrm{eff}}\)</span>. With it, check the <span class="arithmatex">\(z\)</span>-components:</p>
+<div class="arithmatex">\[\begin{align*}
+[\hat L_z,\hat{\vec L}\cdot\hat{\vec S}]&amp;=[\hat L_z,\hat L_x]\hat S_x+[\hat L_z,\hat L_y]\hat S_y=i\hbar\hat L_y\hat S_x-i\hbar\hat L_x\hat S_y,\\
+[\hat S_z,\hat{\vec L}\cdot\hat{\vec S}]&amp;=\hat L_x[\hat S_z,\hat S_x]+\hat L_y[\hat S_z,\hat S_y]=i\hbar\hat L_x\hat S_y-i\hbar\hat L_y\hat S_x .
+\end{align*}\]</div>
+<p>Neither is zero, so <span class="arithmatex">\(\hat H_{\mathrm{eff}}\)</span> does not commute with <span class="arithmatex">\(\hat L_z\)</span> or <span class="arithmatex">\(\hat S_z\)</span>, and the uncoupled basis is <em>not good</em>. But the sum cancels, <span class="arithmatex">\([\hat J_z,\hat{\vec L}\cdot\hat{\vec S}]=0\)</span> (and likewise for <span class="arithmatex">\(\hat J^2\)</span>, <span class="arithmatex">\(\hat L^2\)</span>, <span class="arithmatex">\(\hat S^2\)</span>).</p>
+<div class="admonition thm">
+<p class="admonition-title">Good Basis for Spin-Orbit Coupling</p>
+<div class="arithmatex">\[
+\{\hat H_{\mathrm{eff}},\hat J^2,\hat J_z,\hat L^2,\hat S^2\}\quad\text{commute; the good basis is }|j,m,\ell,s\rangle.
+\]</div>
+</div>
+<h2 id="183-energy-shifts">18.3 Energy Shifts<a class="headerlink" href="#183-energy-shifts" title="Permanent link">&para;</a></h2>
+<p>With <span class="arithmatex">\(\hat{\vec J}=\hat{\vec L}+\hat{\vec S}\)</span>, <span class="arithmatex">\(\hat J^2=\hat L^2+\hat S^2+2\hat{\vec L}\cdot\hat{\vec S}\)</span>, hence</p>
+<div class="arithmatex">\[
+\hat{\vec L}\cdot\hat{\vec S}=\tfrac12\big(\hat J^2-\hat L^2-\hat S^2\big),\qquad
+\lambda\hat{\vec L}\cdot\hat{\vec S}\,|j,m,\ell,s\rangle=\frac\lambda2\hbar^2\big[j(j+1)-\ell(\ell+1)-s(s+1)\big]|j,m,\ell,s\rangle,
+\]</div>
+<p>with <span class="arithmatex">\(s=\tfrac12\)</span> for the electron. The triangle rule gives <span class="arithmatex">\(\ell-\tfrac12\le j\le\ell+\tfrac12\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+j=\ell+\tfrac12:&amp;\quad\frac\lambda2\hbar^2\Big[(\ell+\tfrac12)(\ell+\tfrac32)-\ell(\ell+1)-\tfrac34\Big]=\frac{\lambda\hbar^2\,\ell}2,\\
+j=\ell-\tfrac12:&amp;\quad\frac\lambda2\hbar^2\Big[(\ell-\tfrac12)(\ell+\tfrac12)-\ell(\ell+1)-\tfrac34\Big]=-\frac{\lambda\hbar^2(\ell+1)}2 .
+\end{align*}\]</div>
+<div class="admonition thm">
+<p class="admonition-title">Spin-Orbit Shifts for <span class="arithmatex">\(s=\tfrac12\)</span></p>
+<div class="arithmatex">\[
+\Delta E=\begin{cases}+\dfrac{\lambda\hbar^2\ell}2&amp;j=\ell+\tfrac12,\\[6pt]-\dfrac{\lambda\hbar^2(\ell+1)}2&amp;j=\ell-\tfrac12.\end{cases}
+\]</div>
+</div>
+<div class="admonition verification">
+<p class="admonition-title">Verification</p>
+<p>The weighted average of the shifts vanishes: <span class="arithmatex">\((2j_++1)\frac{\ell}2+(2j_-+1)\big(-\frac{\ell+1}2\big)=(2\ell+2)\frac\ell2-2\ell\frac{\ell+1}2=0\)</span> (in units of <span class="arithmatex">\(\lambda\hbar^2\)</span>), so the multiplet’s centre of gravity is unshifted.</p>
+</div>
+<p><strong>Ground state, <span class="arithmatex">\(\ell=0\)</span>:</strong> no spin-orbit coupling (<span class="arithmatex">\(\hat{\vec L}=0\)</span>), a single level <span class="arithmatex">\(3S_{1/2}\)</span>.</p>
+<p><strong>First excited state, <span class="arithmatex">\(\ell=1\)</span>:</strong> the level splits into <span class="arithmatex">\(3P_{1/2}\)</span> (shift <span class="arithmatex">\(-\lambda\)</span>) and <span class="arithmatex">\(3P_{3/2}\)</span> (shift <span class="arithmatex">\(+\lambda/2\)</span>), in the notebook’s units where <span class="arithmatex">\(\hbar^2\)</span> is absorbed into <span class="arithmatex">\(\lambda\)</span>. The splitting is <span class="arithmatex">\(\tfrac32\lambda\)</span>.</p>
+<p><img alt="" class="fig" src="../../assets/figures/18-spin-orbit-coupling-doublet-sodium-fig1.svg" /></p>
+<p>The two transitions <span class="arithmatex">\(3P_{3/2}\to3S_{1/2}\)</span> and <span class="arithmatex">\(3P_{1/2}\to3S_{1/2}\)</span> give the <strong>two lines of sodium</strong> (the yellow doublet).</p>
+<h2 id="184-spectroscopic-notation">18.4 Spectroscopic Notation<a class="headerlink" href="#184-spectroscopic-notation" title="Permanent link">&para;</a></h2>
+<p>The level label is <span class="arithmatex">\(n\,L_j\)</span>: <span class="arithmatex">\(n\)</span> the principal quantum number, <span class="arithmatex">\(L\)</span> a letter for the orbital angular momentum, and <span class="arithmatex">\(j\)</span> the total angular momentum:</p>
+<div class="arithmatex">\[
+\ell=0\Rightarrow S,\qquad \ell=1\Rightarrow P,\qquad \ell=2\Rightarrow D,\ \dots
+\]</div>
+<div class="admonition studynote">
+<p class="admonition-title">Study Note</p>
+<p>The full term symbol is <span class="arithmatex">\(n^{2s+1}L_j\)</span>; for a single electron the multiplicity superscript <span class="arithmatex">\(2s+1=2\)</span> is conventionally omitted when <span class="arithmatex">\(s=\tfrac12\)</span> is understood. The doublet in the name of the effect is exactly the <span class="arithmatex">\(j=\ell\pm\tfrac12\)</span> splitting.</p>
+</div>
+<h2 id="185-magnetic-field-two-limits">18.5 Magnetic Field: Two Limits<a class="headerlink" href="#185-magnetic-field-two-limits" title="Permanent link">&para;</a></h2>
+<p>The magnetic moments from the orbital motion and from the intrinsic spin are</p>
+<div class="arithmatex">\[
+\vec\mu_L=-\frac{e\hbar}{2mc}\,\frac{\hat{\vec L}}\hbar,\qquad \vec\mu_S=-\frac{e\hbar}{2mc}\,\frac{2\hat{\vec S}}\hbar ,
+\]</div>
+<p>(the factor 2 in the spin moment is the electron <span class="arithmatex">\(g\)</span>-factor). Apply <span class="arithmatex">\(\vec B=B\hat e_z\)</span>. The effective Hamiltonian becomes</p>
+<div class="arithmatex">\[
+\hat H_{\mathrm{eff}}=-\frac{\hbar^2}{2m}\nabla^2+V(r)+\lambda\,\hat{\vec L}\cdot\hat{\vec S}+\frac{e\hbar}{2mc}B\,\big(\hat L_z+2\hat S_z\big),
+\]</div>
+<p>where, as in the notes, <span class="arithmatex">\(\hat L_z,\hat S_z\)</span> in the last term are measured in units of <span class="arithmatex">\(\hbar\)</span>. Neither of the two bases commutes with this Hamiltonian in general, so two limits are considered.</p>
+<div class="admonition thm">
+<p class="admonition-title">Zeeman and Paschen-Back Limits</p>
+<p><strong>(i) Zeeman limit</strong> (spin-orbit coupling strong): <span class="arithmatex">\(\ \lambda\hat{\vec L}\cdot\hat{\vec S}\gg\dfrac{e\hbar B}{2mc}(\hat L_z+2\hat S_z)\)</span>. Use the coupled basis <span class="arithmatex">\(|j,m,\ell,s\rangle\)</span>; the field is a small perturbation.</p>
+<p><strong>(ii) Paschen-Back limit</strong> (spin-orbit coupling weak): <span class="arithmatex">\(\ \lambda\hat{\vec L}\cdot\hat{\vec S}\ll\dfrac{e\hbar B}{2mc}(\hat L_z+2\hat S_z)\)</span>. Use the uncoupled basis <span class="arithmatex">\(|\ell,s,m_\ell,m_s\rangle\)</span>; the spin-orbit term is a small perturbation.</p>
+</div>
+<div class="admonition solution">
+<p class="admonition-title">Complete Solution</p>
+<p>In the Paschen-Back limit, the zeroth-order energy shift from the field is <span class="arithmatex">\(\dfrac{e\hbar B}{2mc}(m_\ell+2m_s)\)</span>. The first-order spin-orbit correction is the expectation value of <span class="arithmatex">\(\lambda\hat{\vec L}\cdot\hat{\vec S}=\lambda\big(\hat L_z\hat S_z+\tfrac12(\hat L_+\hat S_-+\hat L_-\hat S_+)\big)\)</span>, where only the diagonal term <span class="arithmatex">\(\lambda\hbar^2m_\ell m_s\)</span> contributes. In the Zeeman limit the field splits each <span class="arithmatex">\(j\)</span>-level into <span class="arithmatex">\(2j+1\)</span> sublevels, <span class="arithmatex">\(\Delta E=g_J\,\mu_BBm\)</span>.</p>
+</div>
+<div class="admonition examtip">
+<p class="admonition-title">Exam Tip</p>
+<p>A common question is <em>which basis, and why</em>. The answer is a comparison of the two terms: whichever of the two perturbation terms dominates picks the basis in which it is diagonal, and the weaker term is treated as a perturbation.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../17-clebsch-gordan-tables/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 17. Clebsch-Gordan Tables">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                17. Clebsch-Gordan Tables
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../19-central-potentials/" class="md-footer__link md-footer__link--next" aria-label="Next: 19. Central Potentials">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                19. Central Potentials
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
