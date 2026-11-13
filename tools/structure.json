@@ -1,0 +1,237 @@
+[
+ {
+  "part": 1,
+  "dir": "01-foundations",
+  "title": "Foundations of Quantum Mechanics",
+  "scope": "The operator formalism of quantum mechanics: the postulates and Dirac notation, measurement and collapse, expectation values and uncertainty, compatible and incompatible operators (with the uncertainty relation), the Dirac delta function and the position and momentum representations, time evolution (the time-evolution operator, stationary states, the Schr\\\"odinger and Heisenberg pictures), the one-dimensional time-independent Schr\\\"odinger equation, the linear harmonic oscillator by the ladder-operator method, and coherent states.",
+  "chapters": [
+   {
+    "num": 1,
+    "title": "Postulates of Quantum Mechanics and Dirac Notation",
+    "path": "01-foundations/01-postulates-quantum-mechanics-dirac-notation.md"
+   },
+   {
+    "num": 2,
+    "title": "Compatible and Incompatible Operators",
+    "path": "01-foundations/02-compatible-incompatible-operators.md"
+   },
+   {
+    "num": 3,
+    "title": "Dirac Delta Function and the Position and Momentum Bases",
+    "path": "01-foundations/03-dirac-delta-function-position-momentum-bases.md"
+   },
+   {
+    "num": 4,
+    "title": "Time Evolution: Stationary States and the Schrödinger and Heisenberg Pictures",
+    "path": "01-foundations/04-time-evolution-stationary-states-schrodinger-heisenberg.md"
+   },
+   {
+    "num": 5,
+    "title": "The One-Dimensional Time-Independent Schrödinger Equation",
+    "path": "01-foundations/05-one-dimensional-time-independent-schrodinger-equation.md"
+   },
+   {
+    "num": 6,
+    "title": "The Linear Harmonic Oscillator: Ladder-Operator Method",
+    "path": "01-foundations/06-linear-harmonic-oscillator-ladder-operator-method.md"
+   },
+   {
+    "num": 7,
+    "title": "Classical Limit of the Oscillator: Coherent States",
+    "path": "01-foundations/07-classical-limit-oscillator-coherent-states.md"
+   }
+  ]
+ },
+ {
+  "part": 2,
+  "dir": "02-symmetry-angular-momentum",
+  "title": "Symmetry, Angular Momentum and Clebsch-Gordan Coefficients",
+  "scope": "This part covers symmetry and conservation laws in quantum mechanics: translation and time translation (momentum and energy conservation, the time-evolution operator), rotations and the angular momentum algebra, spin-$\\tfrac12$ and the Pauli matrices, the $j=1$ representation, rotation matrices, orbital angular momentum and spherical harmonics, addition of angular momenta with Clebsch-Gordan coefficients, spin-orbit coupling (the sodium doublet, the Zeeman and Paschen-Back limits) and central potentials.",
+  "chapters": [
+   {
+    "num": 8,
+    "title": "Translation Symmetry and Conservation of Momentum",
+    "path": "02-symmetry-angular-momentum/08-translation-symmetry-conservation-momentum.md"
+   },
+   {
+    "num": 9,
+    "title": "Time Translation and the Time-Evolution Operator",
+    "path": "02-symmetry-angular-momentum/09-time-translation-time-evolution-operator.md"
+   },
+   {
+    "num": 10,
+    "title": "Rotations, Isotropy of Space and Angular Momentum Conservation",
+    "path": "02-symmetry-angular-momentum/10-rotations-isotropy-space-angular-momentum-conservation.md"
+   },
+   {
+    "num": 11,
+    "title": "Angular Momentum: Eigenvalues and Ladder Operators",
+    "path": "02-symmetry-angular-momentum/11-angular-momentum-eigenvalues-ladder-operators.md"
+   },
+   {
+    "num": 12,
+    "title": "Spin-1/2 and the Pauli Matrices",
+    "path": "02-symmetry-angular-momentum/12-spin-1-2-pauli-matrices.md"
+   },
+   {
+    "num": 13,
+    "title": "The j=1 Representation and the Angular Momentum Uncertainty Relation",
+    "path": "02-symmetry-angular-momentum/13-j-1-representation-angular-momentum-uncertainty.md"
+   },
+   {
+    "num": 14,
+    "title": "Rotation Matrices (Wigner D-Matrices)",
+    "path": "02-symmetry-angular-momentum/14-rotation-matrices-wigner-d-matrices.md"
+   },
+   {
+    "num": 15,
+    "title": "Orbital Angular Momentum and Spherical Harmonics",
+    "path": "02-symmetry-angular-momentum/15-orbital-angular-momentum-spherical-harmonics.md"
+   },
+   {
+    "num": 16,
+    "title": "Addition of Angular Momenta",
+    "path": "02-symmetry-angular-momentum/16-addition-angular-momenta.md"
+   },
+   {
+    "num": 17,
+    "title": "Clebsch-Gordan Tables",
+    "path": "02-symmetry-angular-momentum/17-clebsch-gordan-tables.md"
+   },
+   {
+    "num": 18,
+    "title": "Spin-Orbit Coupling: the Doublet in Sodium",
+    "path": "02-symmetry-angular-momentum/18-spin-orbit-coupling-doublet-sodium.md"
+   },
+   {
+    "num": 19,
+    "title": "Central Potentials",
+    "path": "02-symmetry-angular-momentum/19-central-potentials.md"
+   }
+  ]
+ },
+ {
+  "part": 3,
+  "dir": "03-tensor-operators",
+  "title": "Tensor Operators, Wigner-Eckart and the Projection Theorem",
+  "scope": "This part covers how operators transform under rotations: scalar and vector operators, Cartesian tensors and their decomposition into irreducible pieces, irreducible spherical tensor operators and their commutation relations with $\\hat{\\vec J}$, the Wigner-Eckart theorem (with the dipole matrix element and the selection rules as the main application), and the projection theorem (with the spin expectation value and the Land\\'e factor as applications). It continues directly from Part~II on angular momentum and Clebsch-Gordan coefficients.",
+  "chapters": [
+   {
+    "num": 20,
+    "title": "Scalar and Vector Operators",
+    "path": "03-tensor-operators/20-scalar-vector-operators.md"
+   },
+   {
+    "num": 21,
+    "title": "Cartesian Tensors: Reducible and Irreducible",
+    "path": "03-tensor-operators/21-cartesian-tensors-reducible-irreducible.md"
+   },
+   {
+    "num": 22,
+    "title": "Irreducible Tensor Operators and Their Commutation Relations",
+    "path": "03-tensor-operators/22-irreducible-tensor-operators-their-commutation-relations.md"
+   },
+   {
+    "num": 23,
+    "title": "The Wigner-Eckart Theorem",
+    "path": "03-tensor-operators/23-wigner-eckart-theorem.md"
+   },
+   {
+    "num": 24,
+    "title": "Application: Dipole Matrix Elements and Selection Rules",
+    "path": "03-tensor-operators/24-application-dipole-matrix-elements-selection-rules.md"
+   },
+   {
+    "num": 25,
+    "title": "The Projection Theorem",
+    "path": "03-tensor-operators/25-projection-theorem.md"
+   }
+  ]
+ },
+ {
+  "part": 4,
+  "dir": "04-time-independent-approximations",
+  "title": "Time-Independent Approximation Methods",
+  "scope": "Time-independent perturbation theory (non-degenerate and degenerate, with the hydrogen fine structure and Zeeman applications), the variational method, and the WKB approximation.",
+  "chapters": [
+   {
+    "num": 26,
+    "title": "Time-Independent Perturbation Theory: Non-Degenerate Case",
+    "path": "04-time-independent-approximations/26-time-independent-perturbation-theory-non-degenerate.md"
+   },
+   {
+    "num": 27,
+    "title": "Time-Independent Perturbation Theory: Degenerate Case",
+    "path": "04-time-independent-approximations/27-time-independent-perturbation-theory-degenerate-case.md"
+   },
+   {
+    "num": 28,
+    "title": "Applications to Hydrogen: Fine Structure and the Zeeman Effect",
+    "path": "04-time-independent-approximations/28-applications-to-hydrogen-fine-structure-zeeman.md"
+   },
+   {
+    "num": 29,
+    "title": "The Variational Method",
+    "path": "04-time-independent-approximations/29-variational-method.md"
+   },
+   {
+    "num": 30,
+    "title": "The WKB Approximation",
+    "path": "04-time-independent-approximations/30-wkb-approximation.md"
+   }
+  ]
+ },
+ {
+  "part": 5,
+  "dir": "05-time-dependent-perturbation",
+  "title": "Time-Dependent Perturbation Theory",
+  "scope": "Time-dependent perturbation theory: the two-level system, the interaction picture and the Dyson series, Rabi oscillations, first and second order transition amplitudes, harmonic perturbations and Fermi's golden rule, the adiabatic and sudden approximations, emission and absorption of radiation (Einstein coefficients, spontaneous emission, selection rules), and time translation with conservation of energy.",
+  "chapters": [
+   {
+    "num": 31,
+    "title": "Time-Dependent Perturbation Theory: The Two-Level System",
+    "path": "05-time-dependent-perturbation/31-time-dependent-perturbation-theory-two-level.md"
+   },
+   {
+    "num": 32,
+    "title": "The Interaction Picture",
+    "path": "05-time-dependent-perturbation/32-interaction-picture.md"
+   },
+   {
+    "num": 33,
+    "title": "Two-Level System with an Oscillating Coupling: Exact Solution",
+    "path": "05-time-dependent-perturbation/33-two-level-system-with-an-oscillating.md"
+   },
+   {
+    "num": 34,
+    "title": "The Dyson Series and General Transition Amplitudes",
+    "path": "05-time-dependent-perturbation/34-dyson-series-general-transition-amplitudes.md"
+   },
+   {
+    "num": 35,
+    "title": "Harmonic Perturbation and Fermi's Golden Rule",
+    "path": "05-time-dependent-perturbation/35-harmonic-perturbation-fermi-s-golden-rule.md"
+   },
+   {
+    "num": 36,
+    "title": "Adiabatic and Sudden Approximations: First-Order Treatment",
+    "path": "05-time-dependent-perturbation/36-adiabatic-sudden-approximations-first-order-treatment.md"
+   },
+   {
+    "num": 37,
+    "title": "Emission and Absorption of Radiation",
+    "path": "05-time-dependent-perturbation/37-emission-absorption-radiation.md"
+   },
+   {
+    "num": 38,
+    "title": "The Sudden Approximation: Overlap of Eigenstates",
+    "path": "05-time-dependent-perturbation/38-sudden-approximation-overlap-eigenstates.md"
+   },
+   {
+    "num": 39,
+    "title": "Time Translation and Conservation of Energy",
+    "path": "05-time-dependent-perturbation/39-time-translation-conservation-energy.md"
+   }
+  ]
+ }
+]

@@ -1,0 +1,56 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}\setlist[itemize]{label=$\bullet$}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=primary]{hyperref}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+
+\geometry{margin=2cm, headheight=14pt}
+\setlength{\emergencystretch}{3em}
+\AtBeginDocument{\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}\setlength{\abovedisplayshortskip}{2pt}\setlength{\belowdisplayshortskip}{4pt}}
+
+\definecolor{primary}{RGB}{20, 50, 100}
+\definecolor{secondary}{RGB}{0, 110, 120}
+\definecolor{boxbg}{RGB}{245, 248, 252}
+\definecolor{exbg}{RGB}{252, 250, 242}
+\definecolor{exframe}{RGB}{180, 130, 40}
+
+\tcbuselibrary{skins,breakable}
+
+\newtcolorbox{thm}[1]{
+    enhanced,
+    breakable,
+    colback=boxbg,
+    colframe=primary,
+    fonttitle=\bfseries,
+    title={#1},
+    arc=2mm,
+    boxrule=0.8pt,
+    left=3mm, right=3mm, top=2mm, bottom=2mm
+}
+
+\newtcolorbox{prob}[1]{
+    enhanced,
+    breakable,
+    colback=exbg,
+    colframe=exframe,
+    fonttitle=\bfseries,
+    title={#1},
+    arc=2mm,
+    boxrule=0.8pt,
+    left=3mm, right=3mm, top=2mm, bottom=2mm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+
+
+

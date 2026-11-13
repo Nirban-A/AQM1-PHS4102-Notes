@@ -1,0 +1,43 @@
+
+% ---- extra packages needed by pandoc output -------------------------------
+\usepackage{graphicx}
+\usepackage{longtable,array,calc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,textcomp}
+\providecommand{\tightlist}{\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-1}   % headings already carry their numbers in the text
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>0.9\textheight 0.9\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt plus 1pt}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{220E}{\ensuremath{\blacksquare}}
+\DeclareUnicodeCharacter{00BD}{\ensuremath{\tfrac12}}
+
+% ---- boxes: one environment per kind (type names come from the Markdown) ---
+\newcommand{\defadm}[5]{%
+  \definecolor{adm#1fg}{RGB}{#2}\definecolor{adm#1bg}{RGB}{#3}%
+  \newtcolorbox{adm#1}[1]{enhanced,breakable,colback=adm#1bg,colframe=adm#1fg,
+    fonttitle=\bfseries,title={##1},arc=2mm,boxrule=0.8pt,
+    left=3mm,right=3mm,top=2mm,bottom=2mm,before skip=6pt,after skip=6pt}}
+\defadm{thm}{20,50,100}{245,248,252}{}{}
+\defadm{prob}{180,130,40}{252,250,242}{}{}
+\defadm{solution}{46,125,50}{240,248,240}{}{}
+\defadm{intuition}{0,131,143}{238,248,249}{}{}
+\defadm{studynote}{84,110,122}{244,247,248}{}{}
+\defadm{memory}{123,31,162}{248,241,251}{}{}
+\defadm{examtip}{239,108,0}{254,246,238}{}{}
+\defadm{verification}{0,137,123}{238,249,247}{}{}
+\defadm{mistakes}{198,40,40}{253,241,241}{}{}
+\defadm{exam}{173,20,87}{253,240,246}{}{}
+\defadm{book}{69,39,160}{243,241,250}{}{}
+
+\newcommand{\partheading}[2]{\clearpage\refstepcounter{part}\addcontentsline{toc}{part}{Part \thepart: #1}%
+\begin{center}{\Huge\bfseries\color{primary}Part \thepart}\\[4pt]{\LARGE\bfseries\color{primary}#1}\end{center}
+\vspace{2pt}\hrule\vspace{8pt}\noindent #2\par\vspace{6pt}}

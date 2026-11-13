@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page.meta and page.meta.chapter %}
+    <p class="pdf-links">
+      <a class="md-button" href="{{ base_url }}/pdf/chapters/{{ page.file.name }}.pdf">Download this chapter (PDF)</a>
+      <a class="md-button" href="{{ base_url }}/pdf/AQM1_PHS4102_Notes.pdf">Full notes (PDF)</a>
+    </p>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

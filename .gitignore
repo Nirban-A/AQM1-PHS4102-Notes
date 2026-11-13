@@ -1,0 +1,7 @@
+site/
+build/
+.figcache/
+__pycache__/
+*.aux
+*.log
+CLAUDE.md

@@ -1,0 +1,64 @@
+# Advanced Quantum Mechanics I (PHS 4102)
+
+Complete lecture notes and worked problems, converted from the handwritten lecture notebook and arranged in five parts.
+
+Items in coloured boxes marked as *Complete Solution*, *Intuition*, *Study Note*, *Memory Rule*, *Exam Tip*, *Verification* and *Common mistakes* are additions that were not written out in the notebook.
+
+<a class="md-button md-button--primary" href="pdf/AQM1_PHS4102_Notes.pdf">Download the full notes (PDF)</a>
+
+## Contents
+
+### [Part I: Foundations of Quantum Mechanics](01-foundations/index.md)
+
+1. [Postulates of Quantum Mechanics and Dirac Notation](01-foundations/01-postulates-quantum-mechanics-dirac-notation.md)
+2. [Compatible and Incompatible Operators](01-foundations/02-compatible-incompatible-operators.md)
+3. [Dirac Delta Function and the Position and Momentum Bases](01-foundations/03-dirac-delta-function-position-momentum-bases.md)
+4. [Time Evolution: Stationary States and the Schrödinger and Heisenberg Pictures](01-foundations/04-time-evolution-stationary-states-schrodinger-heisenberg.md)
+5. [The One-Dimensional Time-Independent Schrödinger Equation](01-foundations/05-one-dimensional-time-independent-schrodinger-equation.md)
+6. [The Linear Harmonic Oscillator: Ladder-Operator Method](01-foundations/06-linear-harmonic-oscillator-ladder-operator-method.md)
+7. [Classical Limit of the Oscillator: Coherent States](01-foundations/07-classical-limit-oscillator-coherent-states.md)
+
+### [Part II: Symmetry, Angular Momentum and Clebsch-Gordan Coefficients](02-symmetry-angular-momentum/index.md)
+
+8. [Translation Symmetry and Conservation of Momentum](02-symmetry-angular-momentum/08-translation-symmetry-conservation-momentum.md)
+9. [Time Translation and the Time-Evolution Operator](02-symmetry-angular-momentum/09-time-translation-time-evolution-operator.md)
+10. [Rotations, Isotropy of Space and Angular Momentum Conservation](02-symmetry-angular-momentum/10-rotations-isotropy-space-angular-momentum-conservation.md)
+11. [Angular Momentum: Eigenvalues and Ladder Operators](02-symmetry-angular-momentum/11-angular-momentum-eigenvalues-ladder-operators.md)
+12. [Spin-1/2 and the Pauli Matrices](02-symmetry-angular-momentum/12-spin-1-2-pauli-matrices.md)
+13. [The j=1 Representation and the Angular Momentum Uncertainty Relation](02-symmetry-angular-momentum/13-j-1-representation-angular-momentum-uncertainty.md)
+14. [Rotation Matrices (Wigner D-Matrices)](02-symmetry-angular-momentum/14-rotation-matrices-wigner-d-matrices.md)
+15. [Orbital Angular Momentum and Spherical Harmonics](02-symmetry-angular-momentum/15-orbital-angular-momentum-spherical-harmonics.md)
+16. [Addition of Angular Momenta](02-symmetry-angular-momentum/16-addition-angular-momenta.md)
+17. [Clebsch-Gordan Tables](02-symmetry-angular-momentum/17-clebsch-gordan-tables.md)
+18. [Spin-Orbit Coupling: the Doublet in Sodium](02-symmetry-angular-momentum/18-spin-orbit-coupling-doublet-sodium.md)
+19. [Central Potentials](02-symmetry-angular-momentum/19-central-potentials.md)
+
+### [Part III: Tensor Operators, Wigner-Eckart and the Projection Theorem](03-tensor-operators/index.md)
+
+20. [Scalar and Vector Operators](03-tensor-operators/20-scalar-vector-operators.md)
+21. [Cartesian Tensors: Reducible and Irreducible](03-tensor-operators/21-cartesian-tensors-reducible-irreducible.md)
+22. [Irreducible Tensor Operators and Their Commutation Relations](03-tensor-operators/22-irreducible-tensor-operators-their-commutation-relations.md)
+23. [The Wigner-Eckart Theorem](03-tensor-operators/23-wigner-eckart-theorem.md)
+24. [Application: Dipole Matrix Elements and Selection Rules](03-tensor-operators/24-application-dipole-matrix-elements-selection-rules.md)
+25. [The Projection Theorem](03-tensor-operators/25-projection-theorem.md)
+
+### [Part IV: Time-Independent Approximation Methods](04-time-independent-approximations/index.md)
+
+26. [Time-Independent Perturbation Theory: Non-Degenerate Case](04-time-independent-approximations/26-time-independent-perturbation-theory-non-degenerate.md)
+27. [Time-Independent Perturbation Theory: Degenerate Case](04-time-independent-approximations/27-time-independent-perturbation-theory-degenerate-case.md)
+28. [Applications to Hydrogen: Fine Structure and the Zeeman Effect](04-time-independent-approximations/28-applications-to-hydrogen-fine-structure-zeeman.md)
+29. [The Variational Method](04-time-independent-approximations/29-variational-method.md)
+30. [The WKB Approximation](04-time-independent-approximations/30-wkb-approximation.md)
+
+### [Part V: Time-Dependent Perturbation Theory](05-time-dependent-perturbation/index.md)
+
+31. [Time-Dependent Perturbation Theory: The Two-Level System](05-time-dependent-perturbation/31-time-dependent-perturbation-theory-two-level.md)
+32. [The Interaction Picture](05-time-dependent-perturbation/32-interaction-picture.md)
+33. [Two-Level System with an Oscillating Coupling: Exact Solution](05-time-dependent-perturbation/33-two-level-system-with-an-oscillating.md)
+34. [The Dyson Series and General Transition Amplitudes](05-time-dependent-perturbation/34-dyson-series-general-transition-amplitudes.md)
+35. [Harmonic Perturbation and Fermi's Golden Rule](05-time-dependent-perturbation/35-harmonic-perturbation-fermi-s-golden-rule.md)
+36. [Adiabatic and Sudden Approximations: First-Order Treatment](05-time-dependent-perturbation/36-adiabatic-sudden-approximations-first-order-treatment.md)
+37. [Emission and Absorption of Radiation](05-time-dependent-perturbation/37-emission-absorption-radiation.md)
+38. [The Sudden Approximation: Overlap of Eigenstates](05-time-dependent-perturbation/38-sudden-approximation-overlap-eigenstates.md)
+39. [Time Translation and Conservation of Energy](05-time-dependent-perturbation/39-time-translation-conservation-energy.md)
+
