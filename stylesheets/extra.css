@@ -1,73 +1,295 @@
-/* Boxes carried over from the LaTeX notes, plus the study-tag boxes. */
+/* ------------------------------------------------------------------
+   Paper-style theme for the AQM-1 notes.
+   Serif text, hairline rules, theorem-style boxes, booktabs tables.
+   ------------------------------------------------------------------ */
+
+/* ---- palette ------------------------------------------------------ */
 :root {
-  --md-admonition-icon--thm: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.45 4.73L5.82 21z"/></svg>');
-  --md-admonition-icon--prob: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6Z"/></svg>');
-  --md-admonition-icon--solution: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>');
-  --md-admonition-icon--intuition: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>');
-  --md-admonition-icon--studynote: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');
-  --md-admonition-icon--memory: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l7-3 7 3V5a2 2 0 0 0-2-2Z"/></svg>');
-  --md-admonition-icon--examtip: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>');
-  --md-admonition-icon--verification: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9Z"/></svg>');
-  --md-admonition-icon--mistakes: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2v-4h2m0 8h-2v-2h2M1 21h22L12 2 1 21Z"/></svg>');
-  --md-admonition-icon--exam: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6m4 18H6V4h7v5h5v11Z"/></svg>');
-  --md-admonition-icon--book: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2M6 4h5v8l-2.5-1.5L6 12V4Z"/></svg>');
+  --ink: #1b1b1f;
+  --ink-soft: #55565c;
+  --paper: #ffffff;
+  --rule: #cfcfd4;
+  --accent: #1d3557;
+
+  /* box colours, muted so that they read as marginalia, not decoration */
+  --c-thm: #1d3557;
+  --c-prob: #8a5a00;
+  --c-solution: #2f6b3a;
+  --c-intuition: #1f6f78;
+  --c-studynote: #55606b;
+  --c-memory: #6b3f8f;
+  --c-examtip: #a8520a;
+  --c-verification: #2b7a6b;
+  --c-mistakes: #a1303a;
+  --c-exam: #8c2b5b;
+  --c-book: #3f3a8c;
 }
 
-/* One block per kind: colour, title background, icon. */
-.md-typeset .admonition.thm,        .md-typeset details.thm        { border-color: #143264; }
-.md-typeset .admonition.prob,       .md-typeset details.prob       { border-color: #b48228; }
-.md-typeset .admonition.solution,   .md-typeset details.solution   { border-color: #2e7d32; }
-.md-typeset .admonition.intuition,  .md-typeset details.intuition  { border-color: #00838f; }
-.md-typeset .admonition.studynote,  .md-typeset details.studynote  { border-color: #546e7a; }
-.md-typeset .admonition.memory,     .md-typeset details.memory     { border-color: #7b1fa2; }
-.md-typeset .admonition.examtip,    .md-typeset details.examtip    { border-color: #ef6c00; }
-.md-typeset .admonition.verification, .md-typeset details.verification { border-color: #00897b; }
-.md-typeset .admonition.mistakes,   .md-typeset details.mistakes   { border-color: #c62828; }
-.md-typeset .admonition.exam,       .md-typeset details.exam       { border-color: #ad1457; }
-.md-typeset .admonition.book,       .md-typeset details.book       { border-color: #4527a0; }
+[data-md-color-scheme="slate"] {
+  --ink: #e4e2dc;
+  --ink-soft: #a5a6ad;
+  --paper: #17181c;
+  --rule: #3a3c44;
+  --accent: #9db8e0;
 
-.md-typeset .thm > .admonition-title,        .md-typeset .thm > summary        { background-color: #14326422; }
-.md-typeset .prob > .admonition-title,       .md-typeset .prob > summary       { background-color: #b4822822; }
-.md-typeset .solution > .admonition-title,   .md-typeset .solution > summary   { background-color: #2e7d3222; }
-.md-typeset .intuition > .admonition-title,  .md-typeset .intuition > summary  { background-color: #00838f22; }
-.md-typeset .studynote > .admonition-title,  .md-typeset .studynote > summary  { background-color: #546e7a22; }
-.md-typeset .memory > .admonition-title,     .md-typeset .memory > summary     { background-color: #7b1fa222; }
-.md-typeset .examtip > .admonition-title,    .md-typeset .examtip > summary    { background-color: #ef6c0022; }
-.md-typeset .verification > .admonition-title, .md-typeset .verification > summary { background-color: #00897b22; }
-.md-typeset .mistakes > .admonition-title,   .md-typeset .mistakes > summary   { background-color: #c6282822; }
-.md-typeset .exam > .admonition-title,       .md-typeset .exam > summary       { background-color: #ad145722; }
-.md-typeset .book > .admonition-title,       .md-typeset .book > summary       { background-color: #4527a022; }
+  --c-thm: #8fb0e6;
+  --c-prob: #d9a441;
+  --c-solution: #7cc08a;
+  --c-intuition: #6cc3cd;
+  --c-studynote: #9aa8b4;
+  --c-memory: #bd95de;
+  --c-examtip: #e8975a;
+  --c-verification: #6cc7b6;
+  --c-mistakes: #e07a84;
+  --c-exam: #d98bb4;
+  --c-book: #a29bea;
+}
 
-.md-typeset .thm > .admonition-title::before,        .md-typeset .thm > summary::before        { background-color: #143264; -webkit-mask-image: var(--md-admonition-icon--thm); mask-image: var(--md-admonition-icon--thm); }
-.md-typeset .prob > .admonition-title::before,       .md-typeset .prob > summary::before       { background-color: #b48228; -webkit-mask-image: var(--md-admonition-icon--prob); mask-image: var(--md-admonition-icon--prob); }
-.md-typeset .solution > .admonition-title::before,   .md-typeset .solution > summary::before   { background-color: #2e7d32; -webkit-mask-image: var(--md-admonition-icon--solution); mask-image: var(--md-admonition-icon--solution); }
-.md-typeset .intuition > .admonition-title::before,  .md-typeset .intuition > summary::before  { background-color: #00838f; -webkit-mask-image: var(--md-admonition-icon--intuition); mask-image: var(--md-admonition-icon--intuition); }
-.md-typeset .studynote > .admonition-title::before,  .md-typeset .studynote > summary::before  { background-color: #546e7a; -webkit-mask-image: var(--md-admonition-icon--studynote); mask-image: var(--md-admonition-icon--studynote); }
-.md-typeset .memory > .admonition-title::before,     .md-typeset .memory > summary::before     { background-color: #7b1fa2; -webkit-mask-image: var(--md-admonition-icon--memory); mask-image: var(--md-admonition-icon--memory); }
-.md-typeset .examtip > .admonition-title::before,    .md-typeset .examtip > summary::before    { background-color: #ef6c00; -webkit-mask-image: var(--md-admonition-icon--examtip); mask-image: var(--md-admonition-icon--examtip); }
-.md-typeset .verification > .admonition-title::before, .md-typeset .verification > summary::before { background-color: #00897b; -webkit-mask-image: var(--md-admonition-icon--verification); mask-image: var(--md-admonition-icon--verification); }
-.md-typeset .mistakes > .admonition-title::before,   .md-typeset .mistakes > summary::before   { background-color: #c62828; -webkit-mask-image: var(--md-admonition-icon--mistakes); mask-image: var(--md-admonition-icon--mistakes); }
-.md-typeset .exam > .admonition-title::before,       .md-typeset .exam > summary::before       { background-color: #ad1457; -webkit-mask-image: var(--md-admonition-icon--exam); mask-image: var(--md-admonition-icon--exam); }
-.md-typeset .book > .admonition-title::before,       .md-typeset .book > summary::before       { background-color: #4527a0; -webkit-mask-image: var(--md-admonition-icon--book); mask-image: var(--md-admonition-icon--book); }
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--paper);
+  --md-default-fg-color: var(--ink);
+  --md-default-fg-color--light: var(--ink-soft);
+  --md-default-fg-color--lighter: var(--rule);
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--ink) 7%, transparent);
+  --md-typeset-color: var(--ink);
+  --md-typeset-a-color: var(--accent);
+  --md-accent-fg-color: var(--accent);
+  --md-primary-fg-color: var(--paper);
+  --md-primary-bg-color: var(--ink);
+  --md-primary-bg-color--light: var(--ink-soft);
+  --md-code-bg-color: color-mix(in srgb, var(--ink) 6%, transparent);
+  --md-code-fg-color: var(--ink);
+  --md-footer-bg-color: var(--paper);
+  --md-footer-bg-color--dark: var(--paper);
+  --md-footer-fg-color: var(--ink-soft);
+  --md-footer-fg-color--light: var(--ink-soft);
+  --md-footer-fg-color--lighter: var(--ink-soft);
+}
 
-/* Figures are black-on-white TikZ output: keep them readable in dark mode. */
+body { background: var(--paper); }
+
+/* ---- header and tabs: plain white strip with a hairline ---------- */
+.md-header, .md-tabs {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: none;
+}
+.md-header { border-bottom: 1px solid var(--rule); }
+.md-tabs { border-bottom: 1px solid var(--rule); }
+.md-header__title { font-weight: 600; letter-spacing: .01em; }
+.md-tabs__link { opacity: .7; font-size: .68rem; }
+.md-tabs__item--active .md-tabs__link,
+.md-tabs__link:hover { opacity: 1; }
+.md-tabs__item--active .md-tabs__link { text-decoration: underline; text-underline-offset: .5em; }
+.md-search__form { background: color-mix(in srgb, var(--ink) 6%, transparent); border-radius: 2px; }
+.md-search__input::placeholder { color: var(--ink-soft); }
+.md-header__button.md-logo { display: none; }
+.md-grid { max-width: 80rem; }
+.md-sidebar--primary .md-sidebar__scrollwrap, .md-sidebar--primary { width: 11rem; }
+.md-sidebar--secondary, .md-sidebar--secondary .md-sidebar__scrollwrap { width: 10rem; }
+
+/* ---- running text ------------------------------------------------- */
+.md-typeset {
+  font-size: .86rem;
+  line-height: 1.62;
+  color: var(--ink);
+  text-align: left;
+  hyphens: manual;
+  font-feature-settings: "kern", "liga", "onum" 0;
+}
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4,
+.md-typeset table, .md-typeset .admonition-title, .md-typeset summary,
+.md-typeset .md-button { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+
+.md-typeset p, .md-typeset li { orphans: 3; widows: 3; }
+.md-typeset ul, .md-typeset ol { margin: .6em 0 .9em; }
+.md-typeset li { margin-bottom: .25em; }
+.md-typeset hr { border-bottom: 1px solid var(--rule); margin: 2em 0; }
+.md-typeset a { text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.md-typeset a:hover { border-bottom-color: var(--accent); }
+.md-typeset a.headerlink, .md-typeset .md-button, .md-typeset .md-nav a { border-bottom: none; }
+.md-typeset strong { font-weight: 700; }
+
+/* ---- headings ----------------------------------------------------- */
+.md-typeset h1 {
+  font-size: 1.85em;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -.005em;
+  color: var(--ink);
+  margin: .2em 0 1.1em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid var(--ink);
+}
+.md-typeset h2 {
+  font-size: 1.28em;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin: 2.1em 0 .6em;
+}
+.md-typeset h3 {
+  font-size: 1.07em;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
+  margin: 1.7em 0 .5em;
+}
+.md-typeset h4 {
+  font-size: 1em;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 1.3em 0 .4em;
+}
+
+/* ---- boxes: theorem-environment look ------------------------------ */
+.md-typeset .admonition,
+.md-typeset details {
+  --c: var(--c-studynote);
+  font-size: 1em;
+  margin: 1.5em 0;
+  padding: .15em 0 .35em;
+  border: none;
+  border-left: 3px solid var(--c);
+  border-radius: 0 2px 2px 0;
+  box-shadow: none;
+  background: color-mix(in srgb, var(--c) 6%, transparent);
+  page-break-inside: avoid;
+}
+.md-typeset .admonition > :not(.admonition-title),
+.md-typeset details > :not(summary) { margin-left: 1rem; margin-right: 1rem; }
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  margin: 0 !important;
+  padding: .4em 1rem .15em !important;
+  background: none !important;
+  border: none;
+  color: var(--c);
+  font-weight: 700;
+  font-size: .86em;
+  font-variant: small-caps;
+  letter-spacing: .045em;
+}
+.md-typeset .admonition-title::before,
+.md-typeset summary::before,
+.md-typeset summary::after { display: none; }
+
+.md-typeset .admonition .admonition,
+.md-typeset details .admonition { font-size: 1em; background: color-mix(in srgb, var(--c) 5%, var(--paper)); }
+
+.md-typeset .thm          { --c: var(--c-thm); border-left-width: 4px; background: color-mix(in srgb, var(--c) 7%, transparent); }
+.md-typeset .prob         { --c: var(--c-prob); }
+.md-typeset .solution     { --c: var(--c-solution); }
+.md-typeset .intuition    { --c: var(--c-intuition); }
+.md-typeset .studynote    { --c: var(--c-studynote); }
+.md-typeset .memory       { --c: var(--c-memory); }
+.md-typeset .examtip      { --c: var(--c-examtip); }
+.md-typeset .verification { --c: var(--c-verification); }
+.md-typeset .mistakes     { --c: var(--c-mistakes); }
+.md-typeset .exam         { --c: var(--c-exam); }
+.md-typeset .book         { --c: var(--c-book); }
+
+/* source tag in the top-right corner of a box ("Title || Source") */
+.md-typeset .src-tag {
+  float: right;
+  font-weight: 400;
+  font-style: italic;
+  font-variant: normal;
+  letter-spacing: 0;
+  font-size: .95em;
+  color: var(--ink-soft);
+  margin-left: 1em;
+}
+
+/* ---- tables: booktabs --------------------------------------------- */
+.md-typeset table:not([class]) {
+  font-size: .9em;
+  border: none;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  display: table;
+}
+.md-typeset table:not([class]) th {
+  background: none;
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom: 1px solid var(--ink);
+  padding: .6em .9em;
+  min-width: 0;
+}
+.md-typeset table:not([class]) td {
+  border-top: none;
+  padding: .45em .9em;
+}
+.md-typeset table:not([class]) tr:hover { background: none; }
+.md-typeset table:not([class]) tbody tr:last-child td { padding-bottom: .6em; }
+.md-typeset__table { display: block; }
+
+/* ---- code, figures, display math ---------------------------------- */
+.md-typeset code { border-radius: 2px; font-size: .85em; }
+.md-typeset pre > code { border-radius: 0; }
+
 .md-typeset img.fig {
   display: block;
-  margin: 1em auto;
+  margin: 1.4em auto;
   max-width: 100%;
+  min-width: 60%;
   background: #fff;
-  border-radius: 6px;
-  padding: 6px;
+  padding: 8px;
+  border: 1px solid var(--rule);
+  border-radius: 0;
 }
 
-/* Wide displays scroll instead of overflowing on phones. */
-.md-typeset div.arithmatex { overflow-x: auto; overflow-y: hidden; }
+.md-typeset div.arithmatex { overflow-x: auto; overflow-y: hidden; margin: .4em 0; }
+.md-typeset mjx-container[display="true"] { margin: .9em 0 !important; font-size: 94%; }
 
-.pdf-links { margin: 0.5em 0 1.2em; }
+/* ---- sidebars ----------------------------------------------------- */
+.md-nav { font-size: .66rem; }
+.md-nav__title { font-weight: 700; color: var(--ink); }
+.md-nav__item .md-nav__link--active { color: var(--accent); font-weight: 600; }
+.md-sidebar__scrollwrap { scrollbar-width: thin; }
 
-/* Material shrinks admonition text to .64rem; these boxes carry the actual notes. */
-.md-typeset .admonition, .md-typeset details { font-size: .78rem; }
-.md-typeset .admonition .admonition, .md-typeset details .admonition { font-size: 1em; }
+/* ---- buttons and links to PDFs ------------------------------------ */
+.pdf-links { margin: 0 0 1.4em; text-align: right; }
+.md-typeset .md-button {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  padding: .35em 1em;
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.md-typeset .md-button:hover { border-color: var(--ink); color: var(--ink); background: none; }
+.md-typeset .md-button--primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.md-typeset .md-button--primary:hover { background: var(--ink); color: var(--paper); opacity: .85; }
 
-/* Small TikZ figures: scale them up to at least 60% of the text column. */
-.md-typeset img.fig { min-width: 60%; }
+/* ---- footer -------------------------------------------------------- */
+.md-footer { border-top: 1px solid var(--rule); }
+.md-footer-meta { background: var(--paper); }
+.md-footer__link { color: var(--ink-soft); }
+
+/* ---- small screens ------------------------------------------------- */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset { font-size: .82rem; }
+  .md-typeset h1 { font-size: 1.45em; }
+  .md-typeset h2 { font-size: 1.18em; margin-top: 1.7em; }
+  .pdf-links { text-align: left; display: flex; gap: .4rem; flex-wrap: wrap; }
+  .pdf-links .md-button { margin: 0; font-size: .6rem; padding: .3em .7em; }
+  .md-typeset .admonition > :not(.admonition-title),
+  .md-typeset details > :not(summary) { margin-left: .7rem; margin-right: .7rem; }
+  .md-typeset .admonition-title, .md-typeset summary { padding-left: .7rem !important; }
+}
+
+/* ---- print: what you see on the page is what prints ---------------- */
+@media print {
+  .md-typeset { font-size: 11pt; }
+  .md-header, .md-tabs, .md-sidebar, .md-footer, .pdf-links { display: none; }
+}

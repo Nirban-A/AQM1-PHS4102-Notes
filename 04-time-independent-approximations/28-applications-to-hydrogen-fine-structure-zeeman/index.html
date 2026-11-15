@@ -48,8 +48,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Serif 4";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -71,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -129,7 +129,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
@@ -139,7 +139,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -2299,6 +2299,14 @@ E^{(1)}_{\text{FS}} = -\frac{\alpha^4m_ec^2}{8n^4}\Big(\frac{4n}{j+\frac12}-3\Bi
 \]</div>
 </div>
 <p>Check for <span class="arithmatex">\(j=l+\tfrac12\)</span>: spin-orbit term <span class="arithmatex">\(\frac{\alpha^4m_ec^2}{2n^3(l+1)(2l+1)}\)</span>; combining with the relativistic term gives <span class="arithmatex">\(\frac{8n}{2l+1}-3-\frac{4n}{(l+1)(2l+1)} = \frac{4n}{l+1}-3 = \frac{4n}{j+1/2}-3\)</span>.</p>
+<div class="admonition studynote">
+<p class="admonition-title">Study Note (the case <span class="arithmatex">\(l=0\)</span> and the Darwin term)</p>
+<p>The simplification above uses <span class="arithmatex">\(j(j+1)-l(l+1)-\frac34=l\)</span> for <span class="arithmatex">\(j=l+\frac12\)</span> and then cancels a factor <span class="arithmatex">\(l\)</span> against the denominator, which is only legitimate for <span class="arithmatex">\(l\ge1\)</span>. For an <span class="arithmatex">\(s\)</span> state there is no spin-orbit energy, and the relativistic term alone gives <span class="arithmatex">\(-\frac{\alpha^4m_ec^2}{8n^4}(8n-3)\)</span>, not <span class="arithmatex">\(-\frac{\alpha^4m_ec^2}{8n^4}(4n-3)\)</span>. The difference, <span class="arithmatex">\(+\frac{\alpha^4m_ec^2}{2n^3}\)</span>, is supplied by the <strong>Darwin term</strong> <span class="arithmatex">\(\hat H_D=\frac{\pi e^2\hbar^2}{2m_e^2c^2}\delta^3(\vec r)\)</span> (Gaussian units), whose expectation value in an <span class="arithmatex">\(s\)</span> state is <span class="arithmatex">\(\frac{\pi e^2\hbar^2}{2m_e^2c^2}|\psi_{n00}(0)|^2=\frac{\alpha^4m_ec^2}{2n^3}\)</span> since <span class="arithmatex">\(|\psi_{n00}(0)|^2=1/\pi n^3a_0^3\)</span>. So the formula in terms of <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(j\)</span> holds for <span class="arithmatex">\(s\)</span> states too, but only after the Darwin term is included.</p>
+</div>
+<div class="admonition book">
+<p class="admonition-title">See also: Shankar, Principles of Quantum Mechanics (2nd ed.), section 20.2</p>
+<p>The Darwin term is derived from the Dirac equation in Shankar's section 20.2 (Eqs. 20.2.37 and 20.2.38, p. 573), where <span class="arithmatex">\(\langle n00|\hat H_D|n00\rangle=\frac{\alpha^4m_ec^2}{2n^3}\)</span> as used above. Shankar also notes that the spin-orbit expression, applied formally at <span class="arithmatex">\(l=0\)</span>, happens to reproduce exactly this shift.</p>
+</div>
 <div class="admonition examtip">
 <p class="admonition-title">Exam Tip</p>
 <p>The fine-structure shift depends only on <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(j\)</span>, not on <span class="arithmatex">\(l\)</span> separately (e.g. the <span class="arithmatex">\(2S_{1/2}\)</span> and <span class="arithmatex">\(2P_{1/2}\)</span> levels stay degenerate at this order).</p>
@@ -2348,6 +2356,23 @@ E^{(1)}_B = \frac{eB_0\hbar}{2m_ec}\,g_J\,m_j, \qquad g_J = 1 + \frac{j(j+1) - l
 </div>
 </li>
 </ol>
+<div class="admonition solution">
+<p class="admonition-title">Complete Solution (fine structure on top of the Paschen-Back levels) || Griffiths, Eq. 7.86 (Problem 7.26)</p>
+<p>The strong-field energy above keeps only <span class="arithmatex">\(\hat H^0+\hat H_B\)</span>. The fine-structure terms can be added as a first-order correction, because the states <span class="arithmatex">\(|n,l,m_l,m_s\rangle\)</span> are also good states for them: <span class="arithmatex">\(\hat H_{FS}\)</span> commutes with <span class="arithmatex">\(\hat L^2\)</span> and <span class="arithmatex">\(\hat J_z\)</span>, and by the theorem of <a href="../27-time-independent-perturbation-theory-degenerate-case/">Section 27.4</a> these two operators separate the states that share the same <span class="arithmatex">\(m_l+2m_s\)</span>.</p>
+<p>For the spin-orbit term, <span class="arithmatex">\(|l,m_l\rangle|s,m_s\rangle\)</span> is a product state with <span class="arithmatex">\(\langle\hat L_x\rangle=\langle\hat L_y\rangle=\langle\hat S_x\rangle=\langle\hat S_y\rangle=0\)</span>, so <span class="arithmatex">\(\langle\hat{\vec L}\cdot\hat{\vec S}\rangle=\hbar^2m_lm_s\)</span>. With <span class="arithmatex">\(\langle1/r^3\rangle=1/\big(n^3l(l+\tfrac12)(l+1)a_0^3\big)\)</span> and <span class="arithmatex">\(\frac{e^2\hbar^2}{2m_e^2c^2a_0^3}=|E_1^{(0)}|\alpha^2\)</span>,</p>
+<div class="arithmatex">\[
+E_{\text{so}}=\frac{|E_1^{(0)}|\,\alpha^2}{n^3}\,\frac{m_lm_s}{l(l+\frac12)(l+1)}
+\]</div>
+<p>The relativistic term of <a href="#283-relativistic-correction">Section 28.3</a> can be rewritten with <span class="arithmatex">\(\alpha^4m_ec^2/8n^4=|E_1^{(0)}|\alpha^2/4n^4\)</span>:</p>
+<div class="arithmatex">\[
+E_{\text{rel}}=-\frac{|E_1^{(0)}|\,\alpha^2}{4n^4}\Big(\frac{8n}{2l+1}-3\Big)=\frac{|E_1^{(0)}|\,\alpha^2}{n^3}\Big[\frac3{4n}-\frac{l(l+1)}{l(l+\frac12)(l+1)}\Big]
+\]</div>
+<p>Adding the two,</p>
+<div class="arithmatex">\[
+E^{(1)}_{\text{FS}}=\frac{|E_1^{(0)}|\,\alpha^2}{n^3}\left\{\frac3{4n}-\frac{l(l+1)-m_lm_s}{l(l+\frac12)(l+1)}\right\}
+\]</div>
+<p>The total strong-field energy is <span class="arithmatex">\(-\dfrac{13.6\ \text{eV}}{n^2}+\mu_BB_0(m_l+2m_s)+E^{(1)}_{\text{FS}}\)</span>. The fraction is indeterminate for <span class="arithmatex">\(l=0\)</span>; once the Darwin term is included its value there is <span class="arithmatex">\(1\)</span> (see the Study Note in <a href="#284-fine-structure">Section 28.4</a> and Griffiths Problem 7.28).</p>
+</div>
 <div class="admonition studynote">
 <p class="admonition-title">Study Note (sign in the Landé factor)</p>
 <p>The notebook prints the numerator as <span class="arithmatex">\(j(j+1)-l(l+1)-s(s+1)\)</span>. Since <span class="arithmatex">\(\langle\hat{\vec J}\cdot\hat{\vec S}\rangle = \frac{\hbar^2}{2}[j(j+1)+s(s+1)-l(l+1)]\)</span>, the <span class="arithmatex">\(s(s+1)\)</span> term carries a <strong>plus</strong> sign. Check: for <span class="arithmatex">\(l=0\)</span>, <span class="arithmatex">\(j=s=\tfrac12\)</span> the free electron must give <span class="arithmatex">\(g=2\)</span>: <span class="arithmatex">\(1+\frac{3/4+3/4}{3/2}=2\)</span> (the printed sign would give <span class="arithmatex">\(g=1\)</span>).</p>
@@ -2363,6 +2388,10 @@ E^{(1)}_B = \frac{eB_0\hbar}{2m_ec}\,g_J\,m_j, \qquad g_J = 1 + \frac{j(j+1) - l
 <div class="admonition mistakes">
 <p class="admonition-title">Common mistakes</p>
 <p><span class="arithmatex">\(a\)</span> using the uncoupled basis when spin-orbit coupling is present, (b) writing <span class="arithmatex">\(m_l+m_s\)</span> instead of <span class="arithmatex">\(m_l+2m_s\)</span> (the spin <span class="arithmatex">\(g\)</span>-factor is 2), (c) forgetting that <span class="arithmatex">\(g_J\)</span> depends on <span class="arithmatex">\(l\)</span>, <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(j\)</span>, (d) using <span class="arithmatex">\(E_n^{(0)}\)</span> instead of <span class="arithmatex">\(|E_n^{(0)}|\)</span> in the spin-orbit prefactor.</p>
+</div>
+<div class="admonition book">
+<p class="admonition-title">See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), sections 7.4.3 and 7.5</p>
+<p>Two things the notes do not work out. In the intermediate-field regime (<span class="arithmatex">\(\hat H_B\)</span> comparable to <span class="arithmatex">\(\hat H_{FS}\)</span>, section 7.4.3) the good states are mixtures of <span class="arithmatex">\(|j=l\pm\frac12,m_j\rangle\)</span> with the same <span class="arithmatex">\(m_j\)</span>, so <span class="arithmatex">\(\hat H_B+\hat H_{FS}\)</span> is diagonalized in a <span class="arithmatex">\(2\times2\)</span> block for each <span class="arithmatex">\(m_j\)</span> (for <span class="arithmatex">\(n=2\)</span>, Problems 7.29 and 7.30). Section 7.5 treats the hyperfine splitting of hydrogen, the origin of the 21 cm line.</p>
 </div>
 
 
@@ -2469,6 +2498,8 @@ E^{(1)}_B = \frac{eB_0\hbar}{2m_ec}\,g_J\,m_j, \qquad g_J = 1 + \frac{j(j+1) - l
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/sourcetag.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
