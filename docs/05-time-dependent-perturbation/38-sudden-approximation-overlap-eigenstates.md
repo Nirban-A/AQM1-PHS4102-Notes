@@ -2,8 +2,8 @@
 title: "The Sudden Approximation: Overlap of Eigenstates"
 part: 5
 chapter: 38
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "11.5 (Example 11.3)"
 exam_asked: []
 topics: []
 ---

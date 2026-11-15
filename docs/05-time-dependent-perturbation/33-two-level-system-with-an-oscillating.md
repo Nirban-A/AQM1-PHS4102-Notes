@@ -2,8 +2,8 @@
 title: "Two-Level System with an Oscillating Coupling: Exact Solution"
 part: 5
 chapter: 33
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "Problem 11.9"
 exam_asked: []
 topics: []
 ---
@@ -75,7 +75,7 @@ $$
 
 The conditions $c_2(0)=0\Rightarrow f(0)=0$ and $\dot c_2(0)=-\frac{i\delta}{\hbar}c_1(0)=-\frac{i\delta}\hbar$ (from the equation of motion) fix $f=-\dfrac{i\delta}{\hbar\Omega}\sin\Omega t$. Hence
 
-!!! thm "Rabi Oscillations"
+!!! thm "Rabi Oscillations || Griffiths, Problem 11.9"
 
     $$
     c_2(t) = -\frac{i\delta}{\hbar\Omega}\,\exp\Big[-i(\omega-\omega_{21})\frac t2\Big]\sin\Omega t, \qquad
@@ -112,3 +112,7 @@ The conditions $c_2(0)=0\Rightarrow f(0)=0$ and $\dot c_2(0)=-\frac{i\delta}{\hb
 !!! examtip "Exam Tip"
 
     Three things to remember: (i) the Rabi frequency $\Omega=\sqrt{(\delta/\hbar)^2+\Delta^2/4}$, (ii) the maximum transfer $(\delta/\hbar\Omega)^2$ (a Lorentzian in the detuning, equal to $1$ at resonance), (iii) $P(t)=(\delta/\hbar\Omega)^2\sin^2\Omega t$ is exact; first-order theory is its small-$\delta$ limit.
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), Problem 11.9"
+
+    Griffiths writes the drive as $V\cos\omega t$ and applies the rotating-wave approximation first, so his coupling $|V_{ab}|$ corresponds to $2\delta$ here. He also asks when the system first returns to its initial state: in the notation of this chapter $P_{1\to2}=(\delta/\hbar\Omega)^2\sin^2\Omega t$ first vanishes again at $t=\pi/\Omega$.

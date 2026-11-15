@@ -2,8 +2,8 @@
 title: "Harmonic Perturbation and Fermi's Golden Rule"
 part: 5
 chapter: 35
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "11.4"
 exam_asked: []
 topics: []
 ---
@@ -82,6 +82,10 @@ If $\omega=0$ the perturbation is constant, and $\delta(\omega_{fi})=\delta(\ome
 !!! memory "Memory Rule"
 
     Golden rule in words: rate $=\dfrac{2\pi}\hbar\times|\text{matrix element}|^2\times$ (density of final states at the energy-conserving final energy).
+
+!!! studynote "Study Note (factors of 2 against Griffiths)"
+
+    Griffiths takes the perturbation as $\hat H'=V\cos\omega t=\tfrac12V\big(e^{i\omega t}+e^{-i\omega t}\big)$, so his matrix element $V_{if}/2$ plays the role of $\langle f|\hat v|i\rangle$ here. His long-time result, $P=\dfrac{2\pi}\hbar\Big|\dfrac{V_{if}}2\Big|^2\rho(E_f)\,t$ (Eq. 11.80), is therefore the same golden rule as above. When a problem gives the perturbation as $V\cos\omega t$, use $|V/2|^2$ in the rate.
 
 ## 35.3 Transition into a Continuum of Final States
 

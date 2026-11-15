@@ -8,6 +8,11 @@ function Div(el)
     local typ = el.attributes["type"] or "studynote"
     if not known[typ] then typ = "studynote" end
     local title = el.attributes["title"] or ""
+    -- "Title || Source": the source goes to the right end of the title bar
+    local main, src = title:match("^(.-)%s*||%s*(.*)$")
+    if main then
+      title = main .. "\\hfill{\\normalfont\\small\\itshape " .. src .. "}"
+    end
     local b = {pandoc.RawBlock("latex", "\\begin{adm" .. typ .. "}{" .. title .. "}")}
     for _, x in ipairs(el.content) do table.insert(b, x) end
     table.insert(b, pandoc.RawBlock("latex", "\\end{adm" .. typ .. "}"))

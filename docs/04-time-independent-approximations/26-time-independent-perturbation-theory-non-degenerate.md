@@ -2,8 +2,8 @@
 title: "Time-Independent Perturbation Theory: Non-Degenerate Case"
 part: 4
 chapter: 26
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "7.1"
 exam_asked: []
 topics: []
 ---
@@ -144,7 +144,7 @@ E_n^2 = \langle\psi_n^0|\hat H'|\psi_n^1\rangle
 
     Before computing an infinite sum, check selection rules: most matrix elements vanish by parity or angular momentum, often leaving only two terms (see the oscillator example below).
 
-!!! prob "Example: Charged Oscillator in a Weak Electric Field"
+!!! prob "Example: Charged Oscillator in a Weak Electric Field || Griffiths, Problem 7.6"
 
     A particle of charge $q$ and mass $m$, moving in a 1D harmonic potential of frequency $\omega$, is subject to a “weak” electric field $E$ in the $x$-direction. Calculate the eigenvalues of the Hamiltonian (and compare with perturbation theory).
 
@@ -174,7 +174,7 @@ E_n^2 = \langle\psi_n^0|\hat H'|\psi_n^1\rangle
 
     Only $m = n-1$ and $m = n+1$ contribute.
 
-!!! prob "Example: Charged Oscillator in a Weak Electric Field (continued)"
+!!! prob "Example: Charged Oscillator in a Weak Electric Field (continued) || Griffiths, Problem 7.6"
 
     !!! solution "Complete Solution of the second-order sum"
 
@@ -196,3 +196,7 @@ E_n^2 = \langle\psi_n^0|\hat H'|\psi_n^1\rangle
     !!! studynote "Study Note"
 
         The shift is the same for every level and the series stops at second order here, so perturbation theory reproduces the exact answer; this is a useful test case for any new formula. Physically the oscillator is polarized by the field and its equilibrium moves to $x_0 = -qE/m\omega^2$.
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), Example 7.1"
+
+    A quick sanity check of the formulas: raise the floor of the infinite square well by a constant $V_0$. Then $E_n^{1}=V_0$, and since $\hat H'=V_0\mathbb 1$ has no off-diagonal elements, every higher order vanishes and the exact shift is $V_0$.

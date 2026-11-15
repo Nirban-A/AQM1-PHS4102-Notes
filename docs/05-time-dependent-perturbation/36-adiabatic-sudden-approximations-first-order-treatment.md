@@ -2,8 +2,8 @@
 title: "Adiabatic and Sudden Approximations: First-Order Treatment"
 part: 5
 chapter: 36
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "11.5"
 exam_asked: []
 topics: []
 ---
@@ -92,3 +92,7 @@ $$
 !!! examtip "Exam Tip"
 
     Compare the duration $T$ of the change with $1/\omega_{fi}$: $T\gg1/\omega_{fi}$ means adiabatic (no transitions, $P\propto(\partial_tV)^2$), $T\ll1/\omega_{fi}$ means sudden (the state is left unchanged and projected onto the new eigenstates).
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), section 11.5"
+
+    Griffiths does not use the first-order treatment above. Section 11.5.1 calls a process adiabatic when the Hamiltonian changes gradually, and section 11.5.2 proves the **adiabatic theorem**: a particle that starts in the $n$-th eigenstate of the initial Hamiltonian is carried into the $n$-th eigenstate of the final Hamiltonian, picking up a dynamic phase and a geometric (Berry) phase. His Example 11.3 shows both limits for a particle in the ground state of an infinite well whose wall moves: if the wall moves slowly the particle stays in the ground state of the instantaneous well, and if it moves rapidly the particle is left in its initial state (the sudden limit of [Chapter 38](38-sudden-approximation-overlap-eigenstates.md)).

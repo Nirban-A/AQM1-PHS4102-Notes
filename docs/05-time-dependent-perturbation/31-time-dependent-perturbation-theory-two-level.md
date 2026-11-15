@@ -2,8 +2,8 @@
 title: "Time-Dependent Perturbation Theory: The Two-Level System"
 part: 5
 chapter: 31
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "11.1"
 exam_asked: []
 topics: []
 ---
@@ -146,7 +146,7 @@ Adding the real parts of the double integral over the triangle $t''<t'$ and its 
 
 ## 31.4 Example: Sinusoidal Perturbation
 
-!!! prob "Example: Sinusoidal Perturbation $\hat H'(\vec r,t)=V(\vec r)\cos\omega t$"
+!!! prob "Example: Sinusoidal Perturbation $\hat H'(\vec r,t)=V(\vec r)\cos\omega t$ || Griffiths, Section 11.1.3"
 
     Here $H'_{ab}=V_{ab}\cos\omega t$ and $H'_{ba}=V_{ba}\cos\omega t$. The first-order amplitude is
 

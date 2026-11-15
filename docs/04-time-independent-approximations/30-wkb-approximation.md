@@ -2,8 +2,8 @@
 title: "The WKB Approximation"
 part: 4
 chapter: 30
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "9.1 to 9.3"
 exam_asked: []
 topics: []
 ---
@@ -100,7 +100,7 @@ The probability of finding the particle at $x$ is inversely proportional to its 
 
 ## 30.3 Bound States: Particle in a Well with a Slowly Varying Floor
 
-!!! prob "Example: Infinite Well with a Non-Constant Bottom"
+!!! prob "Example: Infinite Well with a Non-Constant Bottom || Griffiths, Example 9.1"
 
     ![](../assets/figures/30-wkb-approximation-fig2.svg){ .fig }
 
@@ -133,7 +133,7 @@ The probability of finding the particle at $x$ is inversely proportional to its 
 
 ## 30.4 Tunneling
 
-!!! prob "Example: Tunneling Through a Barrier"
+!!! prob "Example: Tunneling Through a Barrier || Griffiths, Section 9.2"
 
     A particle with energy $E$ is incident from the left on a barrier occupying $0<x<a$, where $V>E$.
 
@@ -209,7 +209,7 @@ Substitute $r = r_2\sin^2u$ (see the completed integral below) to get the final 
 
 Here $m$ is the mass of the $\alpha$ particle.
 
-!!! prob "$\alpha$-Decay (continued): Completed Integral and Lifetime"
+!!! prob "$\alpha$-Decay (continued): Completed Integral and Lifetime || Griffiths, Example 9.2"
 
     !!! solution "Complete Solution (the integral)"
 
@@ -367,7 +367,7 @@ $$
 
 ## 30.7 Quantization with Turning Points
 
-!!! prob "Potential Well with One Vertical Wall"
+!!! prob "Potential Well with One Vertical Wall || Griffiths, Example 9.3"
 
     ![](../assets/figures/30-wkb-approximation-fig8.svg){ .fig }
 
@@ -387,7 +387,7 @@ $$
     \boxed{\int_0^{x_2}p(x')\,dx' = \Big(n-\frac14\Big)\pi\hbar\qquad(n=1,2,3,\ldots)}
     $$
 
-!!! prob "Example: Half-Harmonic Oscillator"
+!!! prob "Example: Half-Harmonic Oscillator || Griffiths, Example 9.3"
 
     ![](../assets/figures/30-wkb-approximation-fig9.svg){ .fig }
 

@@ -2,8 +2,8 @@
 title: "The Interaction Picture"
 part: 5
 chapter: 32
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "11.1.2"
 exam_asked: []
 topics: []
 ---
@@ -108,3 +108,7 @@ $$
 !!! examtip "Exam Tip"
 
     This set of equations is the starting point for *every* problem in this chapter: truncate the sum to the relevant levels and solve (exactly for two levels, iteratively in general).
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), section 11.1.2"
+
+    Griffiths does not introduce the interaction picture by name. He writes the state directly as $\sum_nc_n(t)\,e^{-iE_nt/\hbar}|\psi_n\rangle$, so his $c_n(t)$ are exactly the coefficients of the interaction-picture state used here, and the factors $e^{i\omega_{mn}t}$ appear in the equations for $\dot c_m$ from the start. The multi-level equation of [Section 32.2](#322-equation-for-the-coefficients) is Problem 11.24(a).

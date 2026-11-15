@@ -2,8 +2,8 @@
 title: "Time Translation and Conservation of Energy"
 part: 5
 chapter: 39
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "6.8"
 exam_asked: []
 topics: []
 ---
@@ -64,3 +64,7 @@ Choose $\hat\Omega=\hat H$. Since $[\hat H,\hat H]=0$,
 !!! memory "Memory Rule"
 
     Time-independent $\hat H\Rightarrow$ energy conserved; periodic perturbation of frequency $\omega\Rightarrow$ energy changes only in quanta $\hbar\omega$.
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), section 6.8"
+
+    Section 6.8 treats translations in time: the time-evolution operator $e^{-i\hat Ht/\hbar}$ with the Hamiltonian as generator (it is unitary, Problem 6.2), the Heisenberg picture, and time-translation invariance as the symmetry behind conservation of energy. The rule $i\hbar\,\frac d{dt}\langle\hat\Omega\rangle=\langle[\hat\Omega,\hat H]\rangle$ used above is Griffiths's generalized Ehrenfest theorem (Eq. 3.73, section 3.5.3), which carries an extra term $\langle\partial\hat\Omega/\partial t\rangle$ when $\hat\Omega$ depends explicitly on time.

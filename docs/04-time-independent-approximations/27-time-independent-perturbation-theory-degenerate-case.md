@@ -2,8 +2,8 @@
 title: "Time-Independent Perturbation Theory: Degenerate Case"
 part: 4
 chapter: 27
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "7.2"
 exam_asked: []
 topics: []
 ---
@@ -217,3 +217,7 @@ In that case the energies are simply $E^1_+ = \langle\psi_a^0|\hat H'|\psi_a^0\r
 !!! mistakes "Common mistakes"
 
     \(a\) using the non-degenerate formula $E^{(2)}$ when two levels coincide, (b) forgetting that off-diagonal $W_{ij}$ matter even when the diagonal ones are equal, (c) taking the basis states themselves as good states without checking $W_{ab}=0$, (d) dropping the factor $E_n^0-E_m^0$ order (it is $n$ first).
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), section 7.2.3"
+
+    If the square root in the secular equation vanishes, the degeneracy is not lifted at first order, and diagonalizing $W$ puts no restriction on $\alpha,\beta$. The good states must then be found from the next order; Griffiths takes up this case in section 7.2.3 and Problem 7.40.

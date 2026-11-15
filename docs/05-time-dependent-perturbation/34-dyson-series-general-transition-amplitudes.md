@@ -2,8 +2,8 @@
 title: "The Dyson Series and General Transition Amplitudes"
 part: 5
 chapter: 34
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "11.1.2 (Problem 11.23)"
 exam_asked: []
 topics: []
 ---
@@ -173,3 +173,17 @@ c_n^{(2)}(t) &= \Big(-\frac i\hbar\Big)^2\int_{t_0}^tdt'\int_{t_0}^{t'}dt''\sum_
     At first order only $|0\rangle\to|1\rangle$ is possible, because $\langle n|\hat x|0\rangle=0$ for $n\ge2$. The state $|2\rangle$ is reached at second order via the virtual intermediate state $|1\rangle$. The result is valid only if $P_{0\to1}\ll1$, i.e. for a weak field.
 
 ![](../assets/figures/34-dyson-series-general-transition-amplitudes-fig2.svg){ .fig }
+
+!!! verification "Verification (exact result for the kicked oscillator)"
+
+    The perturbation $-e\mathcal E\hat x\,e^{-t^2/\tau^2}$ is a driving force $F(t)=e\mathcal E\,e^{-t^2/\tau^2}$ on the oscillator, and this problem can be solved exactly. An oscillator that starts in $|0\rangle$ ends in a coherent state $|\alpha\rangle$ ([Chapter 7](../01-foundations/07-classical-limit-oscillator-coherent-states.md)) with
+
+    $$
+    |\alpha|^2=\frac1{2m\hbar\omega}\Big|\int_{-\infty}^{\infty}F(t)\,e^{i\omega t}\,dt\Big|^2,\qquad P_{0\to n}=e^{-|\alpha|^2}\frac{|\alpha|^{2n}}{n!}
+    $$
+
+    Here the integral is $e\mathcal E\sqrt\pi\,\tau\,e^{-\omega^2\tau^2/4}$, so $|\alpha|^2=\dfrac{\pi e^2\mathcal E^2\tau^2}{2m\hbar\omega}e^{-\omega^2\tau^2/2}$, which is exactly the first-order $P_{0\to1}$ found above. First-order theory is therefore the weak-force limit $P_{0\to1}\simeq|\alpha|^2$. The exact formula also gives $P_{0\to2}\simeq\tfrac12|\alpha|^4$ for weak forces, the second-order process through the virtual state $|1\rangle$ mentioned in the Study Note.
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), Problem 11.23"
+
+    Griffiths motivates the Dyson series by showing why the naive guess $\exp\big[-\frac i\hbar\int\hat H\,dt\big]$ fails: $\hat H(t)$ does not commute with itself at different times, so the correct solution is the time-ordered series of [Section 34.1](#341-the-time-evolution-operator-in-the-interaction-picture), written with Dyson's time-ordered product.

@@ -2,8 +2,8 @@
 title: "Emission and Absorption of Radiation"
 part: 5
 chapter: 37
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "11.2, 11.3"
 exam_asked: []
 topics: []
 ---
@@ -129,7 +129,7 @@ $$
 
 (the same for absorption). With this average:
 
-!!! thm "Rate of Stimulated Emission (Isotropic Radiation)"
+!!! thm "Rate of Stimulated Emission (Isotropic Radiation) || Griffiths, Section 11.2.3"
 
     $$
     R_{b\to a}=\frac{\pi\,|\vec p|^2\,\rho(\omega_0)}{3\,\epsilon_0\hbar^2}
@@ -186,7 +186,7 @@ $$
 
 Comparing the two (they must be equal at all temperatures):
 
-!!! thm "Einstein Coefficients"
+!!! thm "Einstein Coefficients || Griffiths, Section 11.3.1"
 
     $$
     B_{ab}=B_{ba},\qquad A=\frac{\hbar\omega_0^3}{\pi^2c^3}\,B_{ba}\ \ (\text{rate of spontaneous emission}),\qquad B_{ba}=\frac\pi{3\epsilon_0\hbar^2}|\vec p|^2
@@ -232,7 +232,7 @@ $$
 
 **Selection rule for $m$.** For $\hat z$, $\langle n'l'm'|[\hat L_z,\hat z]|nlm\rangle=0$ gives $\hbar(m'-m)\langle n'l'm'|\hat z|nlm\rangle=0$. Hence
 
-!!! thm "Selection Rule for $z$"
+!!! thm "Selection Rule for $z$ || Griffiths, Problem 11.14"
 
     $$
     \langle n'l'm'|\hat z|nlm\rangle\neq0\ \Longrightarrow\ m'=m
@@ -254,7 +254,7 @@ Multiply (A) by $(m'-m)$ and use (B):
 
 The same holds for $\hat y$.
 
-!!! thm "Selection Rule for $x$ and $y$"
+!!! thm "Selection Rule for $x$ and $y$ || Griffiths, Problem 11.14"
 
     $$
     \langle n'l'm'|\hat x|nlm\rangle\neq0\ \text{(or }\hat y)\ \Longrightarrow\ m'-m=\pm1
@@ -280,7 +280,7 @@ $$
 
 so a non-zero matrix element requires $l'=l=0$ or $l'-l=\pm1$.
 
-!!! thm "Selection Rule for $l$ (Dipole Transitions)"
+!!! thm "Selection Rule for $l$ (Dipole Transitions) || Griffiths, Problem 11.15"
 
     $$
     \langle n'l'm'|\hat{\vec r}|nlm\rangle\neq0\ \Longrightarrow\ \Delta l=l'-l=\pm1\quad(\text{and }\Delta m=0,\pm1)

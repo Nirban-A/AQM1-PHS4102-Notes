@@ -2,8 +2,8 @@
 title: "The Variational Method"
 part: 4
 chapter: 29
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "8.1, 8.2"
 exam_asked: []
 topics: []
 ---
@@ -57,7 +57,7 @@ and therefore
 
 ## 29.2 Example: Harmonic Oscillator
 
-!!! prob "Example: Variational Treatment of the Harmonic Oscillator"
+!!! prob "Example: Variational Treatment of the Harmonic Oscillator || Griffiths, Example 8.1"
 
     $\hat H = -\dfrac{\hbar^2}{2m}\dfrac{d^2}{dx^2} + \dfrac12m\omega^2x^2$, with the exactly known $E_{GS} = \tfrac12\hbar\omega$. Use the trial function $\psi(x) = A\exp(-bx^2)$.
 
@@ -99,7 +99,7 @@ At the minimum the two contributions are equal, $\langle T\rangle = \langle V\ra
 
 ## 29.3 Example: Delta-Function Potential
 
-!!! prob "Example: Variational Treatment of the Attractive Delta Potential"
+!!! prob "Example: Variational Treatment of the Attractive Delta Potential || Griffiths, Example 8.2"
 
     $\hat H = -\dfrac{\hbar^2}{2m}\dfrac{d^2}{dx^2} - \alpha\delta(x)$, with exactly known $E_{GS} = -\dfrac{m\alpha^2}{2\hbar^2}$. Trial function $\psi(x) = A\exp(-bx^2)$ with $A = (2b/\pi)^{1/4}$.
 
@@ -136,7 +136,7 @@ $$
 
 Experimentally the ground-state energy is $E_{GS} = -78.975\ \text{eV}\approx -79$ eV.
 
-!!! prob "Ground State of Helium: Setup and Trial Function"
+!!! prob "Ground State of Helium: Setup and Trial Function || Griffiths, Section 8.2"
 
     **Step 1: neglect the electron-electron interaction.** Then $\hat H = \hat h_1+\hat h_2$ with $\hat h_i = -\frac{\hbar^2}{2m}\nabla_i^2 - \frac{e^2}{4\pi\varepsilon_0}\frac2{r_i}$, and $\phi(\vec r_1,\vec r_2) = \psi_1(\vec r_1)\psi_2(\vec r_2)$ with $\hat h_i\psi_i = \varepsilon_i\psi_i$. Each $\hat h_i$ is a hydrogen-like Hamiltonian with nuclear charge $2e$, whose Bohr radius is $a_{He} = \dfrac{4\pi\varepsilon_0\hbar^2}{m\,2e\cdot e} = \dfrac{a_H}2$. Writing $a\equiv a_H$ and $E_H$ for the hydrogen ground-state energy,
 
@@ -170,7 +170,7 @@ Experimentally the ground-state energy is $E_{GS} = -78.975\ \text{eV}\approx -7
 
     ![](../assets/figures/29-variational-method-fig3.svg){ .fig }
 
-!!! prob "Ground State of Helium (continued): the Integral $V_{ee}$"
+!!! prob "Ground State of Helium (continued): the Integral $V_{ee}$ || Griffiths, Section 8.2"
 
     **Angular integral.** With $d^3r_2 = r_2^2\sin\theta_2\,dr_2\,d\theta_2\,d\varphi_2$ and the $\varphi_2$ integration giving $2\pi$:
 
@@ -222,7 +222,7 @@ Experimentally the ground-state energy is $E_{GS} = -78.975\ \text{eV}\approx -7
         *(the $Z$-dependence):* With hydrogen-like expectation values for charge $Z$, $\langle T\rangle = -Z^2E_H$ per electron, $\langle 1/r\rangle=Z/a$, and the true attraction to charge $2e$:
 
         $$
-        \langle T\rangle_{\text{tot}} = -2Z^2E_H, \qquad \langle V_{Ne}\rangle_{\text{tot}} = +8ZE_H, \qquad \langle V_{ee}\rangle = \frac{5Z}{4a}\frac{e^2}{4\pi\varepsilon_0} = -\frac54ZE_H
+        \langle T\rangle_{\text{tot}} = -2Z^2E_H, \qquad \langle V_{Ne}\rangle_{\text{tot}} = +8ZE_H, \qquad \langle V_{ee}\rangle = \frac{5Z}{8a}\frac{e^2}{4\pi\varepsilon_0} = -\frac54ZE_H
         $$
 
         $$
@@ -235,6 +235,10 @@ Experimentally the ground-state energy is $E_{GS} = -78.975\ \text{eV}\approx -7
         \frac{d}{dZ}\langle\hat H\rangle = 0 \;\Rightarrow\; -4Z+\tfrac{27}4=0 \;\Rightarrow\; \boxed{Z=\tfrac{27}{16}=1.69}, \qquad \boxed{\langle\hat H\rangle = -77.5\ \text{eV}}
         $$
 
+    !!! studynote "Study Note (correction)"
+
+        The notebook has $\frac{5Z}{4a}$ in this line. The correct factor is $\frac{5Z}{8a}$: it must reduce to $\frac5{4a}\frac{e^2}{4\pi\varepsilon_0}$ at $Z=2$ (the value found above), and with $\frac{e^2}{4\pi\varepsilon_0a}=-2E_H$ it gives $-\frac54ZE_H$, which is what the next line uses. Griffiths has the same result, $\langle V_{ee}\rangle=\frac{5Z}{8a}\frac{e^2}{4\pi\varepsilon_0}=-\frac{5Z}4E_1$ (Eq. 8.32).
+
     !!! verification "Verification"
 
         $\big(-2Z^2+\frac{27}4Z\big)\big|_{Z=27/16} = \frac{729}{128}=5.69$, and $5.69\times(-13.6)=-77.5$ eV, still above (less negative than) the experimental $-78.975$ eV, within about 2%. $Z_{\text{eff}}=1.69<2$ is the screening effect.
@@ -242,3 +246,7 @@ Experimentally the ground-state energy is $E_{GS} = -78.975\ \text{eV}\approx -7
 !!! mistakes "Common mistakes"
 
     \(a\) forgetting to normalize the trial function, (b) using a trial function that does not satisfy the boundary conditions of the problem, (c) minimizing the wrong quantity (minimize $\langle\hat H\rangle$, not $\langle T\rangle$), (d) interpreting the minimum as an exact energy: it is only an *upper bound*, (e) confusing $E_H$ (negative) with the Rydberg energy $+13.6$ eV.
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), sections 8.1, 8.3 and 8.4"
+
+    A corollary of the variational principle (Problem 8.4): if the trial function is orthogonal to the exact ground state, $\langle\psi|\psi_{GS}\rangle=0$, then $\langle\hat H\rangle\ge E_{1}$, the energy of the first excited state. The proof is the one in Section 29.1 with the $n=0$ term absent from the expansion. Sections 8.3 and 8.4 apply the method to the hydrogen molecule ion and the hydrogen molecule, which these notes do not cover.

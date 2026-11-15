@@ -2,8 +2,8 @@
 title: "Applications to Hydrogen: Fine Structure and the Zeeman Effect"
 part: 4
 chapter: 28
-source_book: 
-source_section: 
+source_book: "Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+source_section: "7.3, 7.4"
 exam_asked: []
 topics: []
 ---
@@ -148,6 +148,14 @@ Spin-orbit coupling plus the relativistic correction together form the **fine st
 
 Check for $j=l+\tfrac12$: spin-orbit term $\frac{\alpha^4m_ec^2}{2n^3(l+1)(2l+1)}$; combining with the relativistic term gives $\frac{8n}{2l+1}-3-\frac{4n}{(l+1)(2l+1)} = \frac{4n}{l+1}-3 = \frac{4n}{j+1/2}-3$.
 
+!!! studynote "Study Note (the case $l=0$ and the Darwin term)"
+
+    The simplification above uses $j(j+1)-l(l+1)-\frac34=l$ for $j=l+\frac12$ and then cancels a factor $l$ against the denominator, which is only legitimate for $l\ge1$. For an $s$ state there is no spin-orbit energy, and the relativistic term alone gives $-\frac{\alpha^4m_ec^2}{8n^4}(8n-3)$, not $-\frac{\alpha^4m_ec^2}{8n^4}(4n-3)$. The difference, $+\frac{\alpha^4m_ec^2}{2n^3}$, is supplied by the **Darwin term** $\hat H_D=\frac{\pi e^2\hbar^2}{2m_e^2c^2}\delta^3(\vec r)$ (Gaussian units), whose expectation value in an $s$ state is $\frac{\pi e^2\hbar^2}{2m_e^2c^2}|\psi_{n00}(0)|^2=\frac{\alpha^4m_ec^2}{2n^3}$ since $|\psi_{n00}(0)|^2=1/\pi n^3a_0^3$. So the formula in terms of $n$ and $j$ holds for $s$ states too, but only after the Darwin term is included.
+
+!!! book "See also: Shankar, Principles of Quantum Mechanics (2nd ed.), section 20.2"
+
+    The Darwin term is derived from the Dirac equation in Shankar's section 20.2 (Eqs. 20.2.37 and 20.2.38, p. 573), where $\langle n00|\hat H_D|n00\rangle=\frac{\alpha^4m_ec^2}{2n^3}$ as used above. Shankar also notes that the spin-orbit expression, applied formally at $l=0$, happens to reproduce exactly this shift.
+
 !!! examtip "Exam Tip"
 
     The fine-structure shift depends only on $n$ and $j$, not on $l$ separately (e.g. the $2S_{1/2}$ and $2P_{1/2}$ levels stay degenerate at this order).
@@ -206,6 +214,30 @@ Two limiting regimes are treated (the relativistic term is neglected in the firs
         E^{(1)}_B = \frac{eB_0\hbar}{2m_ec}\,g_J\,m_j, \qquad g_J = 1 + \frac{j(j+1) - l(l+1) + s(s+1)}{2j(j+1)}
         $$
 
+!!! solution "Complete Solution (fine structure on top of the Paschen-Back levels) || Griffiths, Eq. 7.86 (Problem 7.26)"
+
+    The strong-field energy above keeps only $\hat H^0+\hat H_B$. The fine-structure terms can be added as a first-order correction, because the states $|n,l,m_l,m_s\rangle$ are also good states for them: $\hat H_{FS}$ commutes with $\hat L^2$ and $\hat J_z$, and by the theorem of [Section 27.4](27-time-independent-perturbation-theory-degenerate-case.md) these two operators separate the states that share the same $m_l+2m_s$.
+
+    For the spin-orbit term, $|l,m_l\rangle|s,m_s\rangle$ is a product state with $\langle\hat L_x\rangle=\langle\hat L_y\rangle=\langle\hat S_x\rangle=\langle\hat S_y\rangle=0$, so $\langle\hat{\vec L}\cdot\hat{\vec S}\rangle=\hbar^2m_lm_s$. With $\langle1/r^3\rangle=1/\big(n^3l(l+\tfrac12)(l+1)a_0^3\big)$ and $\frac{e^2\hbar^2}{2m_e^2c^2a_0^3}=|E_1^{(0)}|\alpha^2$,
+
+    $$
+    E_{\text{so}}=\frac{|E_1^{(0)}|\,\alpha^2}{n^3}\,\frac{m_lm_s}{l(l+\frac12)(l+1)}
+    $$
+
+    The relativistic term of [Section 28.3](#283-relativistic-correction) can be rewritten with $\alpha^4m_ec^2/8n^4=|E_1^{(0)}|\alpha^2/4n^4$:
+
+    $$
+    E_{\text{rel}}=-\frac{|E_1^{(0)}|\,\alpha^2}{4n^4}\Big(\frac{8n}{2l+1}-3\Big)=\frac{|E_1^{(0)}|\,\alpha^2}{n^3}\Big[\frac3{4n}-\frac{l(l+1)}{l(l+\frac12)(l+1)}\Big]
+    $$
+
+    Adding the two,
+
+    $$
+    E^{(1)}_{\text{FS}}=\frac{|E_1^{(0)}|\,\alpha^2}{n^3}\left\{\frac3{4n}-\frac{l(l+1)-m_lm_s}{l(l+\frac12)(l+1)}\right\}
+    $$
+
+    The total strong-field energy is $-\dfrac{13.6\ \text{eV}}{n^2}+\mu_BB_0(m_l+2m_s)+E^{(1)}_{\text{FS}}$. The fraction is indeterminate for $l=0$; once the Darwin term is included its value there is $1$ (see the Study Note in [Section 28.4](#284-fine-structure) and Griffiths Problem 7.28).
+
 !!! studynote "Study Note (sign in the Landé factor)"
 
     The notebook prints the numerator as $j(j+1)-l(l+1)-s(s+1)$. Since $\langle\hat{\vec J}\cdot\hat{\vec S}\rangle = \frac{\hbar^2}{2}[j(j+1)+s(s+1)-l(l+1)]$, the $s(s+1)$ term carries a **plus** sign. Check: for $l=0$, $j=s=\tfrac12$ the free electron must give $g=2$: $1+\frac{3/4+3/4}{3/2}=2$ (the printed sign would give $g=1$).
@@ -221,3 +253,7 @@ Two limiting regimes are treated (the relativistic term is neglected in the firs
 !!! mistakes "Common mistakes"
 
     \(a\) using the uncoupled basis when spin-orbit coupling is present, (b) writing $m_l+m_s$ instead of $m_l+2m_s$ (the spin $g$-factor is 2), (c) forgetting that $g_J$ depends on $l$, $s$ and $j$, (d) using $E_n^{(0)}$ instead of $|E_n^{(0)}|$ in the spin-orbit prefactor.
+
+!!! book "See also: Griffiths, Introduction to Quantum Mechanics (3rd ed.), sections 7.4.3 and 7.5"
+
+    Two things the notes do not work out. In the intermediate-field regime ($\hat H_B$ comparable to $\hat H_{FS}$, section 7.4.3) the good states are mixtures of $|j=l\pm\frac12,m_j\rangle$ with the same $m_j$, so $\hat H_B+\hat H_{FS}$ is diagonalized in a $2\times2$ block for each $m_j$ (for $n=2$, Problems 7.29 and 7.30). Section 7.5 treats the hyperfine splitting of hydrogen, the origin of the 21 cm line.

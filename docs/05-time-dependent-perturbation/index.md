@@ -17,3 +17,7 @@ Time-dependent perturbation theory: the two-level system, the interaction pictur
 37. [Emission and Absorption of Radiation](37-emission-absorption-radiation.md)
 38. [The Sudden Approximation: Overlap of Eigenstates](38-sudden-approximation-overlap-eigenstates.md)
 39. [Time Translation and Conservation of Energy](39-time-translation-conservation-energy.md)
+
+!!! book "See also: Griffiths and Schroeter, Introduction to Quantum Mechanics (3rd ed.)"
+
+    Chapters 31 to 38 follow Chapter 11 of Griffiths (two-level systems, emission and absorption of radiation, Fermi's golden rule, the adiabatic approximation), and Chapter 39 follows his section 6.8. Worked examples that come straight from the book carry its example or problem number in the top-right corner of the box. Numbers refer to the 3rd edition; earlier editions number them differently.
